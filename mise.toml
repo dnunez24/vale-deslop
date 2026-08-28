@@ -8,7 +8,13 @@ vale = "3.19.0"
 description = "Install JavaScript dependencies with Bun"
 run = "bun install"
 sources = ["package.json", "bun.lock"]
-outputs = ["node_modules/.bin/commitlint"]
+# The trailing `*` matters: mise treats a bare path as a directory and globs
+# its contents (`path/**/*`), which never matches a single file -- without
+# the `*`, mise never even sees `commitlint` as an existing output. `bun
+# install` is idempotent and fast when nothing changed, so this task is
+# correct either way; `outputs` mainly documents intent and guarantees a
+# rerun when `node_modules` is deleted (verified this session).
+outputs = ["node_modules/.bin/commitlint*"]
 
 [tasks."deps:ci"]
 description = "Install JavaScript dependencies from the committed lockfile"
