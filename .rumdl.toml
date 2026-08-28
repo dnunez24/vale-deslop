@@ -1,0 +1,17 @@
+[global]
+exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md"]
+respect-gitignore = true
+line-length = 100
+
+[MD013]
+code-blocks = false
+tables = false
+headings = false
+paragraphs = false
+reflow = true
+reflow-mode = "sentence-per-line"
+
+[MD060]
+enabled = true
+style = "aligned"
+max-width = 0

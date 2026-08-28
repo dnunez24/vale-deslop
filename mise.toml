@@ -1,2 +1,55 @@
 [tools]
+bun = "1.4.0"
+lefthook = "2.1.11"
+rumdl = "0.2.62"
 vale = "3.19.0"
+
+[tasks.deps]
+description = "Install JavaScript dependencies with Bun"
+run = "bun install"
+sources = ["package.json", "bun.lock"]
+outputs = ["node_modules/.bin/commitlint"]
+
+[tasks."deps:ci"]
+description = "Install JavaScript dependencies from the committed lockfile"
+run = "bun install --frozen-lockfile"
+
+[tasks.hooks]
+description = "Install the Lefthook git hooks"
+run = "lefthook install"
+
+[tasks.sync]
+description = "Download the Vale styles this repo lints itself with"
+run = "vale sync"
+
+[tasks.setup]
+description = "Install dependencies, git hooks, and Vale styles"
+depends = ["deps", "hooks", "sync"]
+
+[tasks.test]
+description = "Run the test suite"
+run = "bun test"
+
+[tasks."lint:prose"]
+description = "Lint Markdown prose with the Vale, Microsoft, and Deslop styles"
+run = "./scripts/lint-prose.sh"
+
+[tasks."lint:md"]
+description = "Lint Markdown structure with rumdl"
+run = "rumdl check ."
+
+[tasks.build]
+description = "Build dist/Deslop.zip"
+run = "./scripts/build-package.sh"
+
+[tasks."expected:update"]
+description = "Regenerate tests/expected-alerts.json from real Vale output"
+run = "bun run scripts/regen-expected.ts"
+
+[tasks."readme:update"]
+description = "Regenerate the rule table in README.md"
+run = "bun run scripts/regen-rule-table.ts"
+
+[tasks.ci]
+description = "Everything the pull-request workflow runs"
+depends = ["test", "lint:prose", "lint:md", "build"]

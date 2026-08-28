@@ -2,3 +2,7 @@
 # check in the lockfile
 .omp/plugins/*
 !.omp/plugins/omp-plugins.lock.json
+
+node_modules/
+.vale/
+dist/

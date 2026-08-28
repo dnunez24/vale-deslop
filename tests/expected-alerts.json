@@ -1,0 +1,192 @@
+{
+  "clean/fiction.md": {
+    "Deslop.EmDashEmphasis": 4,
+    "Deslop.EmDashDocumentLimit": 1
+  },
+  "clean/legal-policy.md": {
+    "Deslop.WordEcho": 4
+  },
+  "rules/AIBuzzWords.md": {
+    "Deslop.AIBuzzWords": 11,
+    "Deslop.MarketingAdjectives": 1
+  },
+  "rules/AIReferrerParams.md": {
+    "Deslop.AIReferrerParams": 3
+  },
+  "rules/AnaphoraRun.md": {
+    "Deslop.AnaphoraRun": 3,
+    "Deslop.FalseAgency": 1,
+    "Deslop.GenericOpening": 1
+  },
+  "rules/AnnouncementOpener.md": {
+    "Deslop.AnnouncementOpener": 3
+  },
+  "rules/BoldFirstBullet.md": {
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.MarketingAdjectives": 1
+  },
+  "rules/BusinessJargon.md": {
+    "Deslop.BusinessJargon": 11
+  },
+  "rules/ChatbotArtifacts.md": {
+    "Deslop.ChatbotArtifacts": 3
+  },
+  "rules/CopulaAvoidance.md": {
+    "Deslop.CopulaAvoidance": 5,
+    "Deslop.Subjectivity": 1
+  },
+  "rules/CurlyQuotes.md": {
+    "Deslop.CurlyQuotes": 9,
+    "Deslop.ScareQuotes": 1
+  },
+  "rules/DespiteChallenges.md": {
+    "Deslop.DespiteChallenges": 3
+  },
+  "rules/EmDashAside.md": {
+    "Deslop.EmDashAside": 3,
+    "Deslop.EmDashDocumentLimit": 1,
+    "Deslop.Subjectivity": 1
+  },
+  "rules/EmDashDocumentLimit.md": {
+    "Deslop.EmDashParagraphLimit": 1,
+    "Deslop.EmDashAside": 4,
+    "Deslop.EmDashDocumentLimit": 1,
+    "Deslop.EmDashEmphasis": 1,
+    "Deslop.Subjectivity": 2
+  },
+  "rules/EmDashEmphasis.md": {
+    "Deslop.EmDashEmphasis": 2,
+    "Deslop.EmDashDocumentLimit": 1,
+    "Deslop.EmDashAside": 3
+  },
+  "rules/EmDashParagraphLimit.md": {
+    "Deslop.EmDashDocumentLimit": 1,
+    "Deslop.EmDashAside": 10,
+    "Deslop.EmDashParagraphLimit": 3,
+    "Deslop.Subjectivity": 2,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.MagicAdverbs": 1
+  },
+  "rules/Emoji.md": {
+    "Deslop.Emoji": 4,
+    "Deslop.AIBuzzWords": 1
+  },
+  "rules/EmphasisCrutch.md": {
+    "Deslop.EmphasisCrutch": 3,
+    "Deslop.EmDashEmphasis": 1
+  },
+  "rules/ExclamationDensity.md": {
+    "Deslop.ExclamationDensity": 3,
+    "Deslop.Subjectivity": 4,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.StaccatoFragments": 1
+  },
+  "rules/FalseAgency.md": {
+    "Deslop.FalseAgency": 3
+  },
+  "rules/FalseInclusivity.md": {
+    "Deslop.FalseInclusivity": 3
+  },
+  "rules/FalseRange.md": {
+    "Deslop.FalseRange": 3
+  },
+  "rules/FillerTransitions.md": {
+    "Deslop.FillerTransitions": 3,
+    "Deslop.Subjectivity": 1
+  },
+  "rules/GenericOpening.md": {
+    "Deslop.GenericOpening": 3
+  },
+  "rules/GrandioseStakes.md": {
+    "Deslop.GrandioseStakes": 3,
+    "Deslop.MagicAdverbs": 1
+  },
+  "rules/HashtagBlock.md": {
+    "Deslop.HashtagBlock": 3
+  },
+  "rules/HedgingDensity.md": {
+    "Deslop.HedgingDensity": 3
+  },
+  "rules/InventedConcept.md": {
+    "Deslop.InventedConcept": 3
+  },
+  "rules/KnowledgeCutoff.md": {
+    "Deslop.KnowledgeCutoff": 3
+  },
+  "rules/ListicleInProse.md": {
+    "Deslop.ListicleInProse": 3
+  },
+  "rules/MagicAdverbs.md": {
+    "Deslop.MagicAdverbs": 9,
+    "Deslop.MarketingAdjectives": 1
+  },
+  "rules/MarketingAdjectives.md": {
+    "Deslop.MarketingAdjectives": 7,
+    "Deslop.MagicAdverbs": 2
+  },
+  "rules/MetaReference.md": {
+    "Deslop.MetaReference": 3
+  },
+  "rules/NegativeParallelism.md": {
+    "Deslop.NegativeParallelism": 6
+  },
+  "rules/PairedAdjectives.md": {
+    "Deslop.PairedAdjectives": 3,
+    "Deslop.MarketingAdjectives": 1,
+    "Deslop.Subjectivity": 1
+  },
+  "rules/PedagogicalVoice.md": {
+    "Deslop.PedagogicalVoice": 3,
+    "Deslop.EmDashEmphasis": 1
+  },
+  "rules/RhetoricalSetup.md": {
+    "Deslop.RhetoricalSetup": 3
+  },
+  "rules/ScareQuotes.md": {
+    "Deslop.ScareQuotes": 3,
+    "Deslop.MarketingAdjectives": 1
+  },
+  "rules/SentenceRhythm.md": {
+    "Deslop.MagicAdverbs": 1,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.SentenceRhythm": 3
+  },
+  "rules/SignpostedConclusion.md": {
+    "Deslop.SignpostedConclusion": 3
+  },
+  "rules/StaccatoFragments.md": {
+    "Deslop.StaccatoFragments": 3
+  },
+  "rules/Subjectivity.md": {
+    "Deslop.Subjectivity": 8,
+    "Deslop.MarketingAdjectives": 1
+  },
+  "rules/SuperficialParticiple.md": {
+    "Deslop.SuperficialParticiple": 3
+  },
+  "rules/SweepingClaims.md": {
+    "Deslop.SweepingClaims": 3
+  },
+  "rules/ThroatClearing.md": {
+    "Deslop.ThroatClearing": 4,
+    "Deslop.EmDashEmphasis": 1
+  },
+  "rules/TricolonAbstract.md": {
+    "Deslop.TricolonAbstract": 4
+  },
+  "rules/UnicodeDecoration.md": {
+    "Deslop.UnicodeDecoration": 10
+  },
+  "rules/VagueAttribution.md": {
+    "Deslop.VagueAttribution": 3
+  },
+  "rules/WhOpener.md": {
+    "Deslop.WhOpener": 3,
+    "Deslop.StaccatoFragments": 1
+  },
+  "rules/WordEcho.md": {
+    "Deslop.WordEcho": 3,
+    "Deslop.AnaphoraRun": 3,
+    "Deslop.SentenceRhythm": 2
+  }
+}
