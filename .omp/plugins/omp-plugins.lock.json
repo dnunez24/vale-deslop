@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "vale": {
+      "version": "0.1.0",
+      "enabledFeatures": null,
+      "enabled": true
+    }
+  },
+  "settings": {}
+}

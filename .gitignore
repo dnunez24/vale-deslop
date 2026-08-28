@@ -1,0 +1,4 @@
+# Don't commit machine-specific Oh My Pi plugin cache details but
+# check in the lockfile
+.omp/plugins/*
+!.omp/plugins/omp-plugins.lock.json
