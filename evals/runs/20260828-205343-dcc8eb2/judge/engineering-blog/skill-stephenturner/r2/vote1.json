@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A varies its sentence shapes and lands specific closers (\"That was the whole event\"), while B keeps padding (\"day to day,\" \"from end to end\") and a metronomic Start/Then/Finally list. A also preserves the source link and its hedges, whereas B silently alters the URL, hardens tentative claims, and adds unsupported ones (\"we've evaluated,\" \"easy to roll out gradually\").",
+  "costUsd": 0.13805450000000002,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "A reads slightly crisper but leaks fidelity: it drops the hashtags, softens the three-year roadmap claim, converts the sourced attribution into first-person experience, and bolds only one of three bullets. B keeps the claims and trailing content intact at comparable prose quality, despite retaining some filler and inventing \"learn in an afternoon.\"",
+  "costUsd": 0.105947,
+  "valid": true
+}

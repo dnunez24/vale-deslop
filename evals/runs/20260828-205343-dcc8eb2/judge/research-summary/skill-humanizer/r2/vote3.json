@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps every claim, number, and the link exactly as given while reading like one person talking (\"That sleep matters for memory is not news. The number attached to it here is:\"). A strains to avoid the word \"sleep\" (\"rest,\" \"total rest time,\" \"how its timing\"), silently trims the link's query string, and drops the next-era and mechanism claims.",
+  "costUsd": 0.052084,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "arm": "skill-stephenturner",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/engineering-blog/skill-stephenturner/r3/output.md",
+  "words": 875,
+  "retention": 0.92,
+  "alerts": 3,
+  "alertsPer1k": 3.43,
+  "reduction": 0.95,
+  "rulesFiring": 3,
+  "rulesCleared": 32,
+  "regressions": 1,
+  "checks": {
+    "Deslop.SentenceRhythm": 1,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.FalseRange": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 6,
+  "durationMs": 75049,
+  "costUsd": 0.6155285
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both read as human prose with varied sentence lengths, but A quietly drops content (hashtags, the control-tower analogy, the three-year positioning claim), softens \"experts agree,\" and invents details the source never states. B keeps the facts, quotes, formatting, and framing intact while converting the hype and question-barrage into plain statements.",
+  "costUsd": 0.0565225,
+  "valid": true
+}

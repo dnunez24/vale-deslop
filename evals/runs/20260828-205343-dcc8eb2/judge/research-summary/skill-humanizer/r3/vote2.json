@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B holds a consistent voice with varied sentence shapes and keeps the source's deliberate contrasts, which A flattens into uniform third-person declaratives. A also drifts factually: it invents \"two decades of stage-level EEG data,\" turns \"some colleagues\" into \"one colleague,\" converts an open question into a stated publication plan, and alters the URL.",
+  "costUsd": 0.193225,
+  "valid": true
+}

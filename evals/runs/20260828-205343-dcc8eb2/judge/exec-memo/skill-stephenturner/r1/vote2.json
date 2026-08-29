@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "B",
+  "reason": "B varies its sentence shapes and sounds like a specific person; A is clean but flatter and leaves only the first bullet bolded in the three-bets list. B costs some fidelity — it drops \"focus\" and adds an unsupported \"None of this is a new idea\" — but it's still the version I'd ship.",
+  "costUsd": 0.087317,
+  "valid": true
+}

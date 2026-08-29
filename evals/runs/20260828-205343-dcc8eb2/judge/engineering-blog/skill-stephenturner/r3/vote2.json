@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every claim, number, and the link intact while rewriting in a voice with real variation and a specific speaker (\"we'd hold that one loosely\"). B trims the link's parameters, drops the knowledge-cutoff hedge into a flat assertion, and invents \"improvement in throughput,\" while its prose stays closer to the source's metronomic patterns.",
+  "costUsd": 0.1223205,
+  "valid": true
+}

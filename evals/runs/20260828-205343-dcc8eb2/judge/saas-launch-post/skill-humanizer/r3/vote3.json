@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B keeps more specifics (hashtags, the control-tower analogy, the \"approval paradox\" label) but also keeps the salesmanship: boilerplate pillars, \"the platform your team has been waiting for,\" and a reworked reader-nudge. A cuts harder and reads like a person explaining a product; its omissions cost fidelity, but it's the version I'd ship.",
+  "costUsd": 0.11691800000000001,
+  "valid": true
+}

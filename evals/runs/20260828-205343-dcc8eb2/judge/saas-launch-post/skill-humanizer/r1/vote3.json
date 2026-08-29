@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 7,
+    "density": 5
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every number, quote, table, and hashtag intact while breaking up the metronomic triads into varied prose. B reads tighter in places but drops the hashtags and the roadmap claim, reattributes the industry-report statistic to \"in our experience,\" adds invented filler (\"day to day,\" \"quarter after quarter\"), and leaves formatting inconsistent (one bolded bullet, ASCII arrows).",
+  "costUsd": 0.056305,
+  "valid": true
+}

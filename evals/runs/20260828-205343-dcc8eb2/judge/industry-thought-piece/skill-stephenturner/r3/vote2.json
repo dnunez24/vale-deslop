@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A alters a direct quote (\"transformative\" becomes \"disruptive\"), drops the sample-size caveat entirely, and leaves the question-list bullets inconsistently bolded; B keeps those claims intact while writing with more specific voice (\"Automation has a way of turning up work nobody wrote down\") and better sentence variation.",
+  "costUsd": 0.0586385,
+  "valid": true
+}

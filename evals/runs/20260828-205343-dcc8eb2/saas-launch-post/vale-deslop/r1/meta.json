@@ -1,0 +1,25 @@
+{
+  "doc": "saas-launch-post",
+  "arm": "vale-deslop",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/saas-launch-post/vale-deslop/r1/output.md",
+  "words": 738,
+  "retention": 0.86,
+  "alerts": 1,
+  "alertsPer1k": 1.36,
+  "reduction": 0.98,
+  "rulesFiring": 1,
+  "rulesCleared": 35,
+  "regressions": 0,
+  "checks": {
+    "Deslop.EmDashEmphasis": 1
+  },
+  "skillActivated": null,
+  "valeInvocations": 6,
+  "numTurns": 21,
+  "durationMs": 181781,
+  "costUsd": 0.9681577000000001
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A varies its sentence shapes more and keeps specific human details (\"once you've watched the credit loop go around a few times\") that B flattens, while preserving every number and the full URL. B is tighter in spots but truncates the reference link, narrows the open-source-queue claim to \"we've evaluated,\" and pads the opening with redundant clauses.",
+  "costUsd": 0.0485175,
+  "valid": true
+}

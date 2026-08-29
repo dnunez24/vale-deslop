@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B converts the rhetorical-question pile into actual statements and keeps a warmer second-person voice, while A leaves that passage as an awkward comma-spliced run of questions and flattens into neutral prose. B also preserves more of the source verbatim — the \"unrealistic\" quotation, the both-may-matter hedge, and the hashtags — where A rewrites or drops them.",
+  "costUsd": 0.1446745,
+  "valid": true
+}

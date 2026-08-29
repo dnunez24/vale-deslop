@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B has the more distinctive authorial voice and preserves the quoted \"transformative technology\" plus the source's calibrated sample-size hedging; A silently changes that quote to \"disruptive technology\" and leaves the bullet list half-bolded. B's costs are one restated sentence and a forced transition in the reskilling section.",
+  "costUsd": 0.18648,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 5,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B varies sentence length and structure, keeps a specific human voice, and retains the source's hashtags and quoted \"unrealistic,\" while A flattens into uniform declaratives, breaks its own bullet formatting, drops the hashtags, and invents a claim (\"The village hadn't gone this long without water before\") from a source question.",
+  "costUsd": 0.0465895,
+  "valid": true
+}

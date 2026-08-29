@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B opens on the fact rather than a claim, keeps direct address to the donor, and lands specific human turns (\"say the word and we will send one\") where A drifts into neutral third person and a clumsy stacked-question sentence. B also preserves more of the source verbatim — the hashtags, the founder's aphorism, the quoted \"unrealistic\" — while A rewrites the aphorism and converts the tags.",
+  "costUsd": 0.1560105,
+  "valid": true
+}

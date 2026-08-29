@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps sentence lengths varied and sounds like a person talking (\"hand you a tangle,\" \"which doesn't happen often\"), while A flattens into competent but uniform prose, repeats \"Most teams don't realize,\" and adds invented rationale. B also preserves more of the source — hashtags, the arrow glyph, the three-year positioning claim — where A drops or alters them and bolds only one of three bullets.",
+  "costUsd": 0.1461145,
+  "valid": true
+}

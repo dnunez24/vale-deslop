@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence shape more and sounds like a particular person talking to their team (\"That buys us a calmer on-call rotation\"), while A is clean but flatter and leaves an inconsistent bullet-bolding artifact. B loses a fidelity point for inserting claims the source never makes (\"None of this is a new idea,\" \"rather than any clever technique\"), but reads better end to end.",
+  "costUsd": 0.047295000000000004,
+  "valid": true
+}

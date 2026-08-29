@@ -1,0 +1,14 @@
+{
+  "repo": "stephenturner/skill-deslop",
+  "sha": "a906154bef375d9d49ed2ad7da13b2db16f0d3d2",
+  "url": "https://codeload.github.com/stephenturner/skill-deslop/tar.gz/a906154bef375d9d49ed2ad7da13b2db16f0d3d2",
+  "fetchedAt": "2026-08-28T20:09:30.789Z",
+  "files": {
+    "SKILL.md": "90fd6355859239630bf9e1b36f8a0b9071fe7fa63f57b1bf28cf069ad702c546",
+    "LICENSE": "804b62429f0560dd3c35cee93f52e8d30b6cfe8caacfebf2ca0b6c3459306f18",
+    "references/examples.md": "b57d393d67213e02583b1b4d576fa330c41dca27fc15d63a71b2e9ad2745b85d",
+    "references/phrases.md": "82a9ba4d0ce0bf948cc8ec66bd90d78d20e126a6ac7f8ad1b0ab0298766f82ec",
+    "references/structures.md": "50f67311f08df28df83def8c586b24e04fe06dd05cf9335596263802d521757e",
+    "references/tropes.md": "0517837dba7a02438dfd848855ed942c8c69b93c87a650f221df784699645dc8"
+  }
+}

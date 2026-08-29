@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B reads tighter but alters a direct quotation (\"transformative technology\" to \"we have no choice\"), inverts \"before the rollout, not after,\" and drops the three-slide detail. A reworks the prose into more varied human sentences while keeping the claims intact, with one slip: asserting the follow-up piece's three companies as fact.",
+  "costUsd": 0.19495149999999997,
+  "valid": true
+}

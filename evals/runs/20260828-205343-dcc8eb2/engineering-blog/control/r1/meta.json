@@ -1,0 +1,31 @@
+{
+  "doc": "engineering-blog",
+  "arm": "control",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/engineering-blog/control/r1/output.md",
+  "words": 813,
+  "retention": 0.86,
+  "alerts": 9,
+  "alertsPer1k": 11.07,
+  "reduction": 0.83,
+  "rulesFiring": 7,
+  "rulesCleared": 27,
+  "regressions": 0,
+  "checks": {
+    "Deslop.MagicAdverbs": 2,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.EmDashEmphasis": 2,
+    "Deslop.EmDashDocumentLimit": 1,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.EmDashAside": 1,
+    "Deslop.FalseRange": 1
+  },
+  "skillActivated": null,
+  "valeInvocations": null,
+  "numTurns": 6,
+  "durationMs": 85612,
+  "costUsd": 0.312712
+}

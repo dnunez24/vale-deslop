@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps material A silently drops (the containerization comparison, the flow-control-not-networking framing, the \"may be outdated\" caveat) while still sounding like a person rather than a template. A is slightly tighter and repeats \"every team that adopted\" twice; B's small amount of padding costs less than A's lost content.",
+  "costUsd": 0.054238499999999995,
+  "valid": true
+}

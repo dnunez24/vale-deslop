@@ -172,6 +172,11 @@ Deslop.WordEcho = NO
 `Deslop.UnicodeDecoration` rewrites curly quotes, em dashes, and other typographic Unicode back to plain ASCII, while `proselint.Typography` rewrites the other direction.
 A project running both must disable `proselint.Typography` (see the rationale in `Deslop/styles/Deslop/UnicodeDecoration.yml`).
 
+## Evidence
+
+[`evals/REPORT.md`](evals/REPORT.md) compares this package against two popular third-party deslop skills ([`blader/humanizer`](https://github.com/blader/humanizer) and [`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop)) on a pre-registered corpus, with a pre-registered pass-or-fail verdict.
+No numbers here: they change on every re-measure.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).

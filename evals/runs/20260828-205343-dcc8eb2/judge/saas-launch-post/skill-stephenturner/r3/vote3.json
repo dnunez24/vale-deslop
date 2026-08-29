@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every number, quote, the table and the hashtags while cutting the hype, and its sentences vary more; B drops the hashtags, softens the \"dominance\" and \"experts agree\" claims, and adds details the source never stated. A's only real slips are losing the Speed/Visibility/Control labels and a dangling \"finally has an answer\" tease.",
+  "costUsd": 0.05768100000000001,
+  "valid": true
+}

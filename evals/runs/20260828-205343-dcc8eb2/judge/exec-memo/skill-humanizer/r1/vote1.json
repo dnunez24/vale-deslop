@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps a recognizable speaker (\"I'll be blunt,\" \"I'd argue\") and varies sentence length, while A flattens the same passages into neutral summary (\"This raises a few practical questions\") and loses the real/painful tradeoff contrast. A also leaves one bullet bolded and the other two plain, and swaps \"the market demands\" for \"customers want.\"",
+  "costUsd": 0.1273925,
+  "valid": true
+}

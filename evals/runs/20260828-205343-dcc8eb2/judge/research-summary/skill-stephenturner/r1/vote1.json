@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every claim, number, and the URL intact while writing in a voice with actual hands on it (\"small enough that we would not put weight on the difference\"). B is clean but flatter, silently drops the genetics comparison, the tracker-adoption line, and part of the link, adds unsourced padding, and leaves one bullet bolded and two not.",
+  "costUsd": 0.15529749999999998,
+  "valid": true
+}

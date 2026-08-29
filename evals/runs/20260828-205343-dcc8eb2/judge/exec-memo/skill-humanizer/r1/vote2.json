@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A varies sentence length more and keeps a specific first-person voice (\"I'll be blunt\", \"I'd argue\"), where B flattens those into neutral narration and leaves a formatting inconsistency (only the first bullet bolded) plus filler connectives. Both keep the numbers and table intact and both add small unsourced bridging lines, so fidelity is a wash.",
+  "costUsd": 0.172574,
+  "valid": true
+}

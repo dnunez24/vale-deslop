@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A holds a consistent first-person voice with real sentence variety, while B drifts to passive third person and awkward synonym-dodging (\"total rest time,\" \"its timing\"). B also loses more source detail — it alters the pre-registration URL, drops the correlation-to-mechanism step, and renames a section — where A's only lapse is one invented sentence.",
+  "costUsd": 0.103904,
+  "valid": true
+}

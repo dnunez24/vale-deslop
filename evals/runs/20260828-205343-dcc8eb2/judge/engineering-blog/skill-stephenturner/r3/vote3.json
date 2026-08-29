@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A varies its sentence shapes and lands specific human turns, while B keeps the source's metronomic anaphora and flattens the closing steps into a listicle. A also preserves the link and figures (only inventing \"this week\"), whereas B truncates the URL's query string and adds unsupported detail (\"improvement in throughput,\" \"has kept using it\").",
+  "costUsd": 0.085651,
+  "valid": true
+}

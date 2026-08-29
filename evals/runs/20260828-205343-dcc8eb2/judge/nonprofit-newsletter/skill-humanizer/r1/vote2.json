@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B sounds like a person wrote it — varied sentence lengths, concrete openings, lines like \"say the word and we will send one\" — while A is competent but flatter, with awkward seams (the merged question run-on). Fidelity is even: A softens the founder's signature antithesis and converts hashtags to a tags line; B silently lowercases every heading.",
+  "costUsd": 0.10048699999999999,
+  "valid": true
+}

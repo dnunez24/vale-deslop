@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A varies its sentence shapes and lands specific, lived details (\"once you've watched the credit loop go around a few times\"), while B stays clipped and uniform enough to read as processed. B also silently alters the source URL and adds an unsourced qualifier (\"queues we've evaluated\"), costing it fidelity.",
+  "costUsd": 0.13030150000000001,
+  "valid": true
+}

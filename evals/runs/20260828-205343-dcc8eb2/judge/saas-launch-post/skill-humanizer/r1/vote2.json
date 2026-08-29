@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 5
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps the source's facts, attributions, and hashtag block intact while smoothing the hype into varied, human-sounding prose. B has a sharper opening line but drops the hashtags, swaps third-party sourcing for \"in our experience,\" invents content, and leaves formatting inconsistencies (one bolded bullet, ASCII arrows) plus filler tags like \"day after day\" and \"quarter after quarter.\"",
+  "costUsd": 0.053155,
+  "valid": true
+}

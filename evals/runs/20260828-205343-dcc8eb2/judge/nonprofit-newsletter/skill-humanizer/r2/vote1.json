@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 2,
+  "winner": "A",
+  "reason": "Both strip the hedging and false-authority padding cleanly, but B invents facts not in the source (\"The village hasn't gone without water since\"), hardens a hedged claim into an assertion, and drops the hashtags, bullet emphasis, and the monthly/first-time donor line. A is slightly baggier in one merged sentence but preserves the content it was given.",
+  "costUsd": 0.13716250000000002,
+  "valid": true
+}

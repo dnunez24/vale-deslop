@@ -1,5 +1,5 @@
 [global]
-exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md"]
+exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md", "evals"]
 respect-gitignore = true
 line-length = 100
 

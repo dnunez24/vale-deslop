@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps the source's quoted phrase and its careful hedging about what the data can and can't separate, while varying sentence length enough to sound like a person talking. B is tighter but alters a direct quote, hardens hedged findings into flat assertions, and leaves its bullet list inconsistently formatted.",
+  "costUsd": 0.14174050000000002,
+  "valid": true
+}

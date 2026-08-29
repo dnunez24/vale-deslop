@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "A alters a direct quotation (\"transformative\" becomes \"disruptive\"), flattens the source's explicit sample-size caveat into a confident claim, and leaves the bullet list half-bolded. B keeps the quote, the epistemic hedges, and the \"defines this decade\" claim while sounding more specifically voiced, at the cost of one redundant opening pair and a couple of invented framings.",
+  "costUsd": 0.0605585,
+  "valid": true
+}

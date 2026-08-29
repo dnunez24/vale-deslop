@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 6
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's first-person research-team voice and varies its sentence lengths, while A flattens into anonymous third person and leaves an odd disclaimer residue. B is also more faithful: A alters the pre-registration URL, downgrades \"some colleagues\" to one, and reattributes the 18 percent figure to Ridgeway data.",
+  "costUsd": 0.0665485,
+  "valid": true
+}

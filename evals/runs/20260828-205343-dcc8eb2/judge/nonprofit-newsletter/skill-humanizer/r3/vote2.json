@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 5,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A resolves the source's padding into varied, human-sounding prose with a real voice (\"I'm still a little giddy,\" \"say the word\") while keeping every number, name, and hashtag intact. B is flatter and less committed, drops the hashtags, breaks the bold formatting on two of three bullets, and invents a claim (\"the village hadn't gone this long without water before\") that the source never made.",
+  "costUsd": 0.12324449999999999,
+  "valid": true
+}

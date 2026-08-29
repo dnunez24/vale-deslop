@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps the source's link intact and its hedges honest (\"seems to account,\" \"we'd hold that one loosely\") while sounding like a specific engineer wrote it; A strips the URL parameters, drops the currency caveat, and hardens a hedged latency claim into fact while adding an unsourced \"in throughput.\" B's sentence rhythm also varies more where A stays flat.",
+  "costUsd": 0.13617050000000003,
+  "valid": true
+}

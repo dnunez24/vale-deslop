@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B reads like a person wrote it — the inbox-speed opener and \"Luck has nothing to do with why it works\" carry real voice, and its sentence lengths vary instead of settling into a pattern. A is cleaner in places but replaces cut hype with new filler (\"work with each other instead of around each other\"), hedges vaguely (\"in a concrete way\"), and leaves only one of three bullets bolded.",
+  "costUsd": 0.08549999999999999,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A silently rewrites a quoted phrase (\"transformative technology\" becomes \"we have no choice\") and downgrades \"without exception\" to \"most,\" which are real factual alterations; B keeps the claims intact while carrying more voice and sentence-length variety, at the cost of one clunky hedged sentence and unrequested sentence-case headings.",
+  "costUsd": 0.0544735,
+  "valid": true
+}

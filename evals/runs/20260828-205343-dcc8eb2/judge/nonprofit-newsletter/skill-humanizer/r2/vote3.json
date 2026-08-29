@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B invents facts to resolve the source's rhetorical questions (\"The village hasn't gone without water since\"), hardens hedges into claims (\"Recurring gifts matter more\"), and drops the hashtags and list bolding. A trims just as hard while keeping every number and hedge intact, and closes less deferentially than B's retained \"I hope this update helps you see.\"",
+  "costUsd": 0.097548,
+  "valid": true
+}

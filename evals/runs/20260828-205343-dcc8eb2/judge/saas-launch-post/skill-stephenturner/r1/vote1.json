@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 6,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A gains trust by cutting the unattributed \"experts agree\" claim, but it drops the hashtags, mangles the arrow, bolds only one bullet, and pads with tails like \"day after day\" and \"quarter after quarter.\" B keeps every number and element, reads with better rhythm, and carries less filler — worth shipping despite retaining a couple of the source's vaguer boasts.",
+  "costUsd": 0.17908700000000002,
+  "valid": true
+}

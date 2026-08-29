@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A is marginally tighter, but it rewrites a direct quotation (\"transformative technology\" becomes \"we have no choice\") and softens \"every executive, without exception\" to \"most\" — both material fidelity breaks. B preserves the quote, attributions, and hedge structure while landing a more specific voice, at the cost of one clunky qualifying sentence.",
+  "costUsd": 0.1539295,
+  "valid": true
+}

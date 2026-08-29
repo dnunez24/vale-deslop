@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps every claim, number, and the four open questions intact while sounding like a specific person talking, with genuinely varied sentence lengths. A drops the bold on two of three bullets, swaps \"the market\" for \"customers,\" and turns the open question about feature work resuming into an asserted claim the source never makes.",
+  "costUsd": 0.054024499999999996,
+  "valid": true
+}

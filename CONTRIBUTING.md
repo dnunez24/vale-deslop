@@ -38,6 +38,8 @@ You shouldn't need to re-run `mise install` by hand after a `git checkout`.
   (aside from the documented fiction em-dash allowance).
 - The Vale and rumdl configs skip `tests/fixtures/**` on purpose.
   It's slop-filled test input, not house-authored prose, so never reformat it to satisfy the linters.
+- `evals/`: the reproducible eval comparing this package against third-party deslop skills.
+  See `evals/README.md` for how to reproduce the report and what each committed artifact means.
 
 ## Changing or adding a rule
 
@@ -49,6 +51,10 @@ You shouldn't need to re-run `mise install` by hand after a `git checkout`.
 5. Run `mise run test`.
 6. If the rule's `level` or the first line of its `message` changed, run `mise run readme:update`
    to keep the rule table in `README.md` in sync (`tests/style.test.ts` enforces this).
+7. Changing a rule moves the eval numbers.
+   Run `mise run eval:measure && mise run eval:report` and commit the refreshed `evals/runs/*/results.json` and `evals/REPORT.md`.
+   Both scripts regenerate from committed artifacts, so this costs no API credit.
+   The `evals` workflow fails on your pull request if you skip it.
 
 ## Commits
 
@@ -76,6 +82,9 @@ Set these once in the GitHub UI, under Settings:
   The `release` workflow's `publish` job builds and uploads `Deslop.zip` without re-running `test`/`lint:prose`/`lint:md`.
   It trusts that whatever reached `main` already passed CI on its pull request, and this setting is what makes that trust hold.
   Without it, a direct push to `main` could ship a broken archive.
+  Don't add the `evals` workflow to this list.
+  It's path-filtered: on a pull request that touches none of `Deslop/**`, `evals/**`, `scripts/eval-*.ts`, or `tests/evals.test.ts`, GitHub would report a required check as forever pending.
+  That blocks the merge.
 
 ### One-time registry submission
 

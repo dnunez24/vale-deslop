@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A reads like a person wrote it — \"I'm still a little giddy,\" \"say the word and we'll send one\" — while keeping every number, name, and hashtag intact. B is competent but flatter, and it drifts: \"changes daily routines\" waters down the claim, \"the village hadn't gone this long without water\" invents a fact, the hashtags vanish, and the bullet list loses its bold styling halfway through.",
+  "costUsd": 0.047159999999999994,
+  "valid": true
+}

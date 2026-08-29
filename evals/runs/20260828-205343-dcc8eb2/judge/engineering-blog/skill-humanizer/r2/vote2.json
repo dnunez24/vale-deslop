@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps the link and claims intact while varying sentence length and landing specific, human-sounding turns (\"once you've watched the credit loop go around a few times\"). B reads tighter in places but silently alters the URL, hardens hedged claims into \"hard metrics,\" invents \"easy to roll out gradually,\" and pads its opening with redundant clauses.",
+  "costUsd": 0.0457175,
+  "valid": true
+}

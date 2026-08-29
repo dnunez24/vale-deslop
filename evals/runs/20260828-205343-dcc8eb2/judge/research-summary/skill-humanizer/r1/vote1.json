@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 6,
+    "rhythm": 5,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims, numbers, and the URL intact while varying sentence length and sounding like a specific writer; A silently drops the wearable-adoption line and the correlation-to-mechanism step, edits the pre-registration link's query string, and leaves one bullet bolded and two plain. A also reads flatter and more announcement-like.",
+  "costUsd": 0.1469045,
+  "valid": true
+}
