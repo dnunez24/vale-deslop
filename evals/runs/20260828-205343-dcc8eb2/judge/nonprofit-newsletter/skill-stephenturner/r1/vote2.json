@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 6,
+    "rhythm": 6,
+    "trust": 5,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A turns the rhetorical-question pile and the deferential closing into plain statements and varies its sentence shapes; B keeps the four-question stack (mashed into a run-on) and \"I hope this update helps you see...\". B also drifts where A holds: \"dry season\" becomes \"dry stretch\", a hedge is dropped, and the hashtags are reformatted into a tag line.",
+  "costUsd": 0.180382,
+  "valid": true
+}

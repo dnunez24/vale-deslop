@@ -1,0 +1,43 @@
+{
+  "runId": "20260828-205343-dcc8eb2",
+  "createdAt": "2026-08-28T20:53:43.120Z",
+  "git": {
+    "sha": "dcc8eb2",
+    "dirty": true
+  },
+  "vale": {
+    "version": "vale version 3.19.0",
+    "unionRuns": 20,
+    "packageZipSha256": "89a55325690581e2bb94be756b79fcc545451d4b9fcef8222ab18ec561da2126"
+  },
+  "models": {
+    "actor": "claude-sonnet-5",
+    "judge": "opus"
+  },
+  "skills": [
+    {
+      "armId": "skill-humanizer",
+      "repo": "blader/humanizer",
+      "sha": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+      "skillSha256": "fb510431863411e8a20bacf05664c92ee303a2e258a349840d4222ae7f337982"
+    },
+    {
+      "armId": "skill-stephenturner",
+      "repo": "stephenturner/skill-deslop",
+      "sha": "a906154bef375d9d49ed2ad7da13b2db16f0d3d2",
+      "skillSha256": "c14c98daa2535a10144b7cba9f6c8e58fbe8cb86ec7834024844b763ca8a27e1"
+    }
+  ],
+  "config": {
+    "repeats": 3,
+    "judgeVotes": 3,
+    "maxIterations": 8,
+    "budgetUsd": 25
+  },
+  "preflight": {
+    "permissionMode": "bypassPermissions",
+    "toolDenyWorks": true,
+    "jsonSchema": true,
+    "skillIsolated": true
+  }
+}

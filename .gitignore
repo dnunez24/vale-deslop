@@ -6,3 +6,9 @@
 node_modules/
 .vale/
 dist/
+
+evals/runs/**/transcript.jsonl
+evals/runs/**/.package/
+evals/runs/.preflight.json
+evals/.scratch/
+evals/.measure-cache.json

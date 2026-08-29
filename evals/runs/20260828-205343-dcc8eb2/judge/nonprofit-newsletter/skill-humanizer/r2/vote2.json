@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 6,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "Both read cleanly and cut the padding, but B invents facts the source never gave (\"The village hasn't gone without water since\"), hardens hedged claims into assertions, and drops the hashtags and the monthly/first-time donor distinction. A keeps every number and claim intact while still trimming, at the cost of one awkward merged question sentence.",
+  "costUsd": 0.055117000000000006,
+  "valid": true
+}

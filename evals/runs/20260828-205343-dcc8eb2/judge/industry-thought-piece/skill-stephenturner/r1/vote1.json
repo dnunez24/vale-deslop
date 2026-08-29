@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence shape, keeps a recognizable voice, and reframes the buzzword pileup as deliberate quotation rather than sanding it flat. A is competent but metronomic, and converting the questions leaves broken statements (\"So few companies budget for retraining before the rollout, not after\") plus an invented claim about three companies; B's only real slip is rewriting the title.",
+  "costUsd": 0.18693549999999998,
+  "valid": true
+}

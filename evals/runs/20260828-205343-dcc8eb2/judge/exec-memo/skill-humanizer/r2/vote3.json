@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence length and lands a recognizable individual voice (\"I'd argue,\" \"What we got for it\"), while A keeps the stock opener and a flatter, more uniform cadence. A is marginally more faithful (B drops \"focus\" and softens a couple of qualifiers), but not enough to outweigh B's stronger prose.",
+  "costUsd": 0.12392850000000001,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 6,
+    "rhythm": 6,
+    "trust": 5,
+    "authenticity": 5,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims, hedges, and the full pre-registration URL while reading in a specific, varied human voice. A silently alters the link, drops several claims, and hardens hedged statements into flat assertions (\"the hypothesis holds\"), while contorting around the word \"sleep\" into stilted phrases like \"total rest time.\"",
+  "costUsd": 0.1382515,
+  "valid": true
+}

@@ -1,0 +1,32 @@
+{
+  "doc": "industry-thought-piece",
+  "arm": "skill-humanizer",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/industry-thought-piece/skill-humanizer/r3/output.md",
+  "words": 1106,
+  "retention": 0.97,
+  "alerts": 11,
+  "alertsPer1k": 9.95,
+  "reduction": 0.82,
+  "rulesFiring": 8,
+  "rulesCleared": 24,
+  "regressions": 0,
+  "checks": {
+    "Deslop.AIBuzzWords": 1,
+    "Deslop.InventedConcept": 1,
+    "Deslop.FalseAgency": 1,
+    "Deslop.SweepingClaims": 2,
+    "Deslop.MarketingAdjectives": 3,
+    "Deslop.StaccatoFragments": 1,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.MagicAdverbs": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 146452,
+  "costUsd": 0.8233145000000001
+}

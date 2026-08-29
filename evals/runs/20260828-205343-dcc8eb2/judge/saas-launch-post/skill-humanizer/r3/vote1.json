@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A cuts filler harder but falls into a repetitive \"clause, and clause\" cadence, drops content (control-tower analogy, hashtags, the dominance claim), and invents details the source never states. B keeps every number, quote, and claim with more varied rhythm; its cost is a few surviving empties (\"excellence, collaboration, and innovation\") that are easy to strike.",
+  "costUsd": 0.214464,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A cuts the padding and false-authority framing while keeping every claim, number, and owner intact, and sounds like a specific person wrote it. B drifts: it converts \"when will feature work resume\" into an asserted answer, swaps \"the market demands\" for \"customers keep asking,\" adds an unsupported outcomes claim, and breaks the bullet list's bold formatting.",
+  "costUsd": 0.161756,
+  "valid": true
+}

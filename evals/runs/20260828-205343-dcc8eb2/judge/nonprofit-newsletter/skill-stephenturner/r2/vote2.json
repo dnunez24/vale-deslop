@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B is marginally tighter and keeps a touch more voice, but it invents a claim (\"The village hasn't gone without water since\"), hardens the source's hedge about recurring gifts into an assertion, and drops both the hashtags and the longtime-vs-first-time donor line. A preserves the source's claims and content while cutting the same padding, at the cost of a little leftover filler.",
+  "costUsd": 0.0715365,
+  "valid": true
+}

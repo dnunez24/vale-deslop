@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every claim, number, and the hashtag block intact while flattening the hype into plain statements, and its paragraphs vary in length and shape. B reads tightly in spots but drops the opening premise, rewrites the hashtags as a topics line, breaks bullet formatting (only the first is bold), and repeats \"most teams don't realize\" plus a doubled closing.",
+  "costUsd": 0.1360395,
+  "valid": true
+}

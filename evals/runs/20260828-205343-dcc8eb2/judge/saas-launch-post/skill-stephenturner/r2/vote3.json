@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B preserves more source specifics (the values triad, the three-year trajectory, the hashtags) while converting hype and question-stacks into plain statements with varied sentence shapes and a concrete opening. A is cleaner but blander, adds invented justifications, drops or softens several claims, and leaves one inconsistently bolded bullet and an exclamation in the CTA.",
+  "costUsd": 0.09821800000000001,
+  "valid": true
+}

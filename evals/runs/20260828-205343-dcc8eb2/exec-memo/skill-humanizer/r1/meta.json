@@ -1,0 +1,31 @@
+{
+  "doc": "exec-memo",
+  "arm": "skill-humanizer",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/exec-memo/skill-humanizer/r1/output.md",
+  "words": 878,
+  "retention": 0.93,
+  "alerts": 8,
+  "alertsPer1k": 9.11,
+  "reduction": 0.86,
+  "rulesFiring": 7,
+  "rulesCleared": 24,
+  "regressions": 0,
+  "checks": {
+    "Deslop.InventedConcept": 1,
+    "Deslop.FalseAgency": 1,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.PairedAdjectives": 2,
+    "Deslop.AIBuzzWords": 1,
+    "Deslop.BusinessJargon": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 133742,
+  "costUsd": 0.8320485000000001
+}

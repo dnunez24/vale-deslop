@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's substance intact (the genetics comparison, the replication-paradox label, the wearable-adoption claim, \"mechanism,\" the full URL) while still sounding like a person wrote it, with real sentence variety. A is clean but flatter and quietly drops several claims, alters the link, and leaves its takeaway bullets non-parallel.",
+  "costUsd": 0.051250500000000004,
+  "valid": true
+}

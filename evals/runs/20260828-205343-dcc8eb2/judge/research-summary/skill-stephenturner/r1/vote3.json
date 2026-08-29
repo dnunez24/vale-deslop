@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims intact (the wearable-tracker line, the genetics comparison, the URL's full query string) while A silently drops or alters all three and leaves a half-bolded bullet list. B also carries more human texture — \"a familiar trap in this literature,\" \"we would not put weight on the difference\" — where A settles into a flatter, more summary-voiced register.",
+  "costUsd": 0.0481555,
+  "valid": true
+}

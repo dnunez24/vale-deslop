@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 6,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A cuts the empty framing outright (\"In today's competitive landscape\", \"provides transformative results\") that B keeps in softened form, and it preserves the source's calibrated hedging. B upgrades hedged claims into assertions (\"The correlation holds\", \"should pay off\", \"The analysis shows\") and swaps \"the market\" for \"customers\", costing it fidelity.",
+  "costUsd": 0.1408675,
+  "valid": true
+}

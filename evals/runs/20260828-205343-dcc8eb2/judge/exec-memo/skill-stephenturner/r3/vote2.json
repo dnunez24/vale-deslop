@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 2,
+  "winner": "A",
+  "reason": "B hardens the source's deliberate hedges into assertions, drops the \"industry reports\" attribution, bolds only the first bullet, and invents a claim (\"Feature work won't resume at full speed until that's settled\") out of an open question. A reads at least as cleanly while keeping the claims and hedging intact, and avoids B's filler (\"quality over quantity\").",
+  "costUsd": 0.104076,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A cuts harder and keeps a human first-person voice, while B retains the generic \"In today's competitive landscape\" opener and reads flatter. B also alters claims — hedges become assertions (\"correlation holds\", \"should pay off\", \"analysis shows\") and \"the market demands\" becomes \"customers want\" — so A is both tighter and more faithful.",
+  "costUsd": 0.05831000000000001,
+  "valid": true
+}

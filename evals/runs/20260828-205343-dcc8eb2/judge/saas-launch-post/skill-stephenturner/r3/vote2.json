@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every number, quote, table row and hashtag intact while varying sentence length and turning the question-stack and exclamation runs into plain statements. B invents supporting detail (\"months studying\", \"before letting a single customer near it\"), softens or alters claims, drops the hashtags, and ends with two competing closers built from the same trailing-participial rhythm.",
+  "costUsd": 0.1335885,
+  "valid": true
+}

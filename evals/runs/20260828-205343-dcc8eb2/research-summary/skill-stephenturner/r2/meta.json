@@ -1,0 +1,30 @@
+{
+  "doc": "research-summary",
+  "arm": "skill-stephenturner",
+  "repeat": 2,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/research-summary/skill-stephenturner/r2/output.md",
+  "words": 1079,
+  "retention": 0.97,
+  "alerts": 7,
+  "alertsPer1k": 6.49,
+  "reduction": 0.9,
+  "rulesFiring": 6,
+  "rulesCleared": 31,
+  "regressions": 0,
+  "checks": {
+    "Deslop.WordEcho": 2,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.PairedAdjectives": 1,
+    "Deslop.FalseRange": 1,
+    "Deslop.SignpostedConclusion": 1,
+    "Deslop.ScareQuotes": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 7,
+  "durationMs": 214107,
+  "costUsd": 1.116867
+}

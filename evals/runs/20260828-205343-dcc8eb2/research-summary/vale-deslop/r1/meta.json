@@ -1,0 +1,25 @@
+{
+  "doc": "research-summary",
+  "arm": "vale-deslop",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/research-summary/vale-deslop/r1/output.md",
+  "words": 955,
+  "retention": 0.86,
+  "alerts": 1,
+  "alertsPer1k": 1.05,
+  "reduction": 0.98,
+  "rulesFiring": 1,
+  "rulesCleared": 36,
+  "regressions": 0,
+  "checks": {
+    "Deslop.WordEcho": 1
+  },
+  "skillActivated": null,
+  "valeInvocations": 13,
+  "numTurns": 65,
+  "durationMs": 735514,
+  "costUsd": 3.3111943000000013
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 9
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps every claim and hedge, recasting the era prediction and the \"may be outdated\" caveat as attributed judgment, while A drops the former and invents details (\"no one can date it\"). B also varies the source's metronomic runs that A reproduces intact; A is tighter, but B sounds like a specific person.",
+  "costUsd": 0.185955,
+  "valid": true
+}

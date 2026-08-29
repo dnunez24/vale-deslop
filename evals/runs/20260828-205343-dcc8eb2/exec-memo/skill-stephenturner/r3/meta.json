@@ -1,0 +1,29 @@
+{
+  "doc": "exec-memo",
+  "arm": "skill-stephenturner",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/exec-memo/skill-stephenturner/r3/output.md",
+  "words": 846,
+  "retention": 0.9,
+  "alerts": 5,
+  "alertsPer1k": 5.91,
+  "reduction": 0.91,
+  "rulesFiring": 5,
+  "rulesCleared": 26,
+  "regressions": 0,
+  "checks": {
+    "Deslop.FalseAgency": 1,
+    "Deslop.WordEcho": 1,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.AIBuzzWords": 1,
+    "Deslop.BusinessJargon": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 109121,
+  "costUsd": 0.6428965
+}

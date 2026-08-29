@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 6,
+    "rhythm": 5,
+    "trust": 6,
+    "authenticity": 5,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps a consistent human voice with varied sentence length and preserves the source's hedges, numbers, and full URL, while A conspicuously avoids the word \"sleep\" (\"total rest time,\" \"stage-by-stage data\"), truncates the pre-registration link, and hardens hedged claims into flat assertions. B's only lapse is one invented detail about effects outside the consolidation window.",
+  "costUsd": 0.1471065,
+  "valid": true
+}

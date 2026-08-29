@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A cuts the padding while keeping the source's calibration: hedged correlations stay hedged, attributed claims stay attributed. B hardens hedges into facts, invents \"feature work won't resume at full speed until that's settled\" from an open question, adds filler (\"ties the three bets to actual outcomes\"), and bolds only one of three bullets.",
+  "costUsd": 0.17661449999999998,
+  "valid": true
+}

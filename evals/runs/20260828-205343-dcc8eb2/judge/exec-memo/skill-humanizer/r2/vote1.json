@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A rewrites at the sentence level — varied cadence, a real voice (\"We kept the list at three on purpose,\" \"I'd argue\"), and it cuts the opening filler B preserves verbatim. Fidelity is comparable: A drops \"focus\" from one list, while B swaps \"the market\" for \"customers,\" and both shed the vague attributions.",
+  "costUsd": 0.12783850000000002,
+  "valid": true
+}

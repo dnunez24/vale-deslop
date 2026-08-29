@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 5,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every number, name, and link intact, turns the source's hedge-stacking into calibrated uncertainty, and has real voice. B flattens hedged claims into flat assertions, drops the link's tracking parameter and the genetics comparison, renames a section, and swaps \"rest\" for \"sleep\" in ways that read synthetic.",
+  "costUsd": 0.21265350000000002,
+  "valid": true
+}

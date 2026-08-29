@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps a recognizable speaker on the page (\"I'll be blunt,\" \"I'd argue,\" the roadmap paradox) and varies sentence length, while A flattens the voice and awkwardly meta-frames the reader questions; A also breaks its own bullet formatting mid-list (only the first item bolded) and swaps \"the market demands\" for \"customers want.\"",
+  "costUsd": 0.0657675,
+  "valid": true
+}

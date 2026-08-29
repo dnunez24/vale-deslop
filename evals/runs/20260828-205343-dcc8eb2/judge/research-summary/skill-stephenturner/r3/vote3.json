@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A varies its sentence shapes and lands specific lines (\"Three years and 1,200 participants still add up to a correlation\") where B stays evenly paced and neutral. B also invents detail the source lacks (\"two decades of stage-level EEG data,\" attributing the 18% to Ridgeway data, \"one colleague\"), drops the genetics comparison, and alters the link.",
+  "costUsd": 0.07380800000000001,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B reads slightly crisper and less comma-chained, but it silently rewrites a direct quotation (\"transformative technology\" becomes \"we have no choice\"), changes the three-slide deck to a \"three-item pitch,\" and inverts the retraining-budget logic with \"let alone after.\" A preserves every claim and quote intact while still cutting the hedging and announcement phrasing, so it is the one I would ship.",
+  "costUsd": 0.06940500000000001,
+  "valid": true
+}

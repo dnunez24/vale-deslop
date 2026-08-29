@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B leads with fact instead of announcement, varies sentence length more, and lands specific human moments (\"the money is in hand\"); A is competent but evenly paced and leaves a clunky run-on question stack. Fidelity is a wash — A rewrites the founder's aphorism and reformats the hashtags, B lowercases headings and softens a claim.",
+  "costUsd": 0.10767700000000001,
+  "valid": true
+}

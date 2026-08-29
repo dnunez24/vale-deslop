@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 2,
+  "winner": "A",
+  "reason": "B is marginally tighter, but it invents facts the source never asserts (\"The village hasn't gone without water since\"), hardens the source's explicit hedges about recurring gifts into flat claims, and drops the hashtags and the donor-inclusion line. A trims just as hard while keeping every number, hedge, and voice marker intact, losing only two emoji.",
+  "costUsd": 0.13754349999999999,
+  "valid": true
+}

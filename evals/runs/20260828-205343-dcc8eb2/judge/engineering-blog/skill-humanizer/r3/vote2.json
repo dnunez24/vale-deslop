@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B breaks the source's metronomic anaphora that A preserves verbatim, and its hedges (\"we wouldn't lean on it\", \"we don't know\") read as a specific voice. A alters the link, adds unsourced qualifiers (\"we've evaluated\", \"in throughput\"), and misattaches a clause: \"Three teams reviewed the design, which trimmed the API surface twice.\"",
+  "costUsd": 0.19742999999999997,
+  "valid": true
+}

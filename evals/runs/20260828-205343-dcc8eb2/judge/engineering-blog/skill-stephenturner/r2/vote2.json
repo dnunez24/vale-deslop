@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence length and joins clauses like someone recounting their own rollout, while A stays competent but padded, opening with a redundancy (\"outpace consumers and the consumer can't keep up\") plus filler like \"from end to end.\" Fidelity is a wash: A rewrites the reference URL and invents a closing claim; B drops the bouncer analogy but keeps the link and hedges.",
+  "costUsd": 0.16791600000000004,
+  "valid": true
+}

@@ -1,0 +1,29 @@
+{
+  "doc": "saas-launch-post",
+  "arm": "skill-stephenturner",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/saas-launch-post/skill-stephenturner/r3/output.md",
+  "words": 756,
+  "retention": 0.88,
+  "alerts": 6,
+  "alertsPer1k": 7.94,
+  "reduction": 0.9,
+  "rulesFiring": 5,
+  "rulesCleared": 31,
+  "regressions": 1,
+  "checks": {
+    "Deslop.FalseRange": 1,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.EmDashEmphasis": 1,
+    "Deslop.HashtagBlock": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 218675,
+  "costUsd": 0.9938429999999999
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A preserves every number, claim, quote, and tag while flagging the unsourced stat honestly instead of restating it as fact, and its sentence lengths vary naturally. B is tighter but drops specifics (the three-year trajectory, the hashtags, the arrow glyphs), invents an adoption claim, keeps one exclamation-point CTA, and has an inconsistent bold/plain bullet list.",
+  "costUsd": 0.054348499999999994,
+  "valid": true
+}

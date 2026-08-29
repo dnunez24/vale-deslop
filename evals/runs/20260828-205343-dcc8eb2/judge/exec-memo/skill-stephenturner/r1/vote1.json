@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies its sentence shapes more and sounds like a specific person making decisions, while A is clean but flatter and leaves an inconsistent bullet list (one item bolded, two not). Both add small unsupported framings — A's \"ties the three bets together,\" B's \"None of this is a new idea\" — so fidelity is a wash.",
+  "costUsd": 0.12644950000000002,
+  "valid": true
+}

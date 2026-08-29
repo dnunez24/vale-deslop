@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B varies sentence length more and keeps a recognizable engineer's voice (\"failure modes boring enough to ignore,\" \"we wouldn't lean on it\"), where A reads clean but flat. B is also more faithful: A alters the URL, invents \"improvement in throughput\" and \"queues we've evaluated,\" and drops the source's hedge on latency variance.",
+  "costUsd": 0.0715135,
+  "valid": true
+}

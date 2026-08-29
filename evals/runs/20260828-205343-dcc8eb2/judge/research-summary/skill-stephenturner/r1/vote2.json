@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's substance intact — the wearable-adoption note, the mechanism step, the audience framing, the full URL — while its sentences vary in length and carry a recognizable first-person voice. A is tighter but silently drops several claims, alters the link and a section heading, and leaves a half-converted bullet list where only the first item retains its bold label.",
+  "costUsd": 0.1445575,
+  "valid": true
+}

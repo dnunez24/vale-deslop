@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A varies sentence shape instead of preserving the source's metronomic triads, cuts the filler closers, and keeps the bolded bullets and specifics intact. B leaves padding like \"I hope this piece helps readers,\" drops the bullet emphasis, and drifts on details (\"three-slide\" to \"three-part\", turning a hypothetical follow-up into an asserted one).",
+  "costUsd": 0.15436650000000002,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps the source's claims and link intact and lands a more specific voice, while A invents material the source never states (queues \"had stopped being simple,\" teams \"kept it as-is,\" \"easy to roll out gradually\") and pads its openings. B's costs are the dropped bouncer analogy and a habit of joining clauses with \", and.\"",
+  "costUsd": 0.108711,
+  "valid": true
+}

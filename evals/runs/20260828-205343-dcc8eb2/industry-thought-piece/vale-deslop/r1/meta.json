@@ -1,0 +1,25 @@
+{
+  "doc": "industry-thought-piece",
+  "arm": "vale-deslop",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/industry-thought-piece/vale-deslop/r1/output.md",
+  "words": 1019,
+  "retention": 0.89,
+  "alerts": 1,
+  "alertsPer1k": 0.98,
+  "reduction": 0.98,
+  "rulesFiring": 1,
+  "rulesCleared": 31,
+  "regressions": 0,
+  "checks": {
+    "Deslop.MarketingAdjectives": 1
+  },
+  "skillActivated": null,
+  "valeInvocations": 3,
+  "numTurns": 8,
+  "durationMs": 183384,
+  "costUsd": 0.7396689999999999
+}

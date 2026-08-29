@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A reframes the buzzword section as a catalogue of vendor vocabulary instead of deleting the specifics, and varies sentence shape rather than marching in parallel. B keeps a cuttable authorial aside and, converting the follow-up offer, asserts a claim the source never made about three companies, while flipping \"might surprise\" to \"should surprise.\"",
+  "costUsd": 0.1984955,
+  "valid": true
+}

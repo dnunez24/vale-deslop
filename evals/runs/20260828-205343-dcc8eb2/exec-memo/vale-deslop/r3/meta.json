@@ -1,0 +1,23 @@
+{
+  "doc": "exec-memo",
+  "arm": "vale-deslop",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/exec-memo/vale-deslop/r3/output.md",
+  "words": 828,
+  "retention": 0.88,
+  "alerts": 0,
+  "alertsPer1k": 0,
+  "reduction": 1,
+  "rulesFiring": 0,
+  "rulesCleared": 31,
+  "regressions": 0,
+  "checks": {},
+  "skillActivated": null,
+  "valeInvocations": 4,
+  "numTurns": 10,
+  "durationMs": 142580,
+  "costUsd": 0.6709312
+}

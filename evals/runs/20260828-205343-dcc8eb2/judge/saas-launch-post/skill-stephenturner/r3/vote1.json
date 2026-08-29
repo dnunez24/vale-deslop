@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence length and carries a specific voice (\"we went through the workflows... one at a time\"; \"Three things usually decide it\"), where A settles into a uniform and-joined cadence. B pays for it by keeping some puffery and dropping the Speed/Visibility/Control labels, but reads better than A's flatter cleanup.",
+  "costUsd": 0.1778925,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A cuts the empty opener and the \"transformative results\" filler outright, while B keeps a hollowed version of both, and A preserves the source's hedged claims (\"may hold,\" \"could pay off\") where B firms them into assertions and swaps \"market\" for \"customers.\" B has slightly livelier sentence variation, but A is denser and more faithful.",
+  "costUsd": 0.07308,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B opens with a concrete image instead of an announcement, varies sentence length throughout, and keeps the source's specifics (approval paradox, the three-year trajectory, the values triad, the hashtags) while still converting hype into claims. A reads cleaner in spots but is flatter, quietly drops several source claims, mangles the arrow glyph, and bolds only the first of three parallel bullets.",
+  "costUsd": 0.1344335,
+  "valid": true
+}

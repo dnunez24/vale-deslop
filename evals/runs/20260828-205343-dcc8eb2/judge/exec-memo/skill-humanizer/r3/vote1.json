@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 5,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B preserves every claim and the bullet formatting while sounding like one identifiable person, and it keeps the four reader questions honest rather than dissolving them. A drops bold from two of three bets, turns the open question \"When will feature work resume?\" into an asserted claim, and swaps hollow filler for the hype it cut.",
+  "costUsd": 0.173536,
+  "valid": true
+}

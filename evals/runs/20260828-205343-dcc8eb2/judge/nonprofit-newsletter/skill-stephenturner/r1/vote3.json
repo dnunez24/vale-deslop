@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A rebuilds sentences rather than trimming them, so its rhythm varies and it sounds human; B keeps the source scaffolding, a clumsy four-question pileup, and residual filler. B also hardens a deliberate hedge into an assertion and converts the hashtags to a tag line; A's main lapse is asserting causation about the daughters' school year.",
+  "costUsd": 0.126088,
+  "valid": true
+}

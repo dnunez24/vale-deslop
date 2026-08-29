@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 6,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 5,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims, attributions, quotation, and full link while varying sentence shape like a specific writer. A drops the genetics comparison, the \"industry reports\" attribution, the \"mechanism\" step, and part of the URL, and its substitutions of \"rest\" for \"sleep\" (\"total rest time\") read mechanical.",
+  "costUsd": 0.096078,
+  "valid": true
+}

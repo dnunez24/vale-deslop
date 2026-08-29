@@ -1,0 +1,23 @@
+{
+  "doc": "engineering-blog",
+  "arm": "vale-deslop",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20260828-205343-dcc8eb2/engineering-blog/vale-deslop/r1/output.md",
+  "words": 835,
+  "retention": 0.88,
+  "alerts": 0,
+  "alertsPer1k": 0,
+  "reduction": 1,
+  "rulesFiring": 0,
+  "rulesCleared": 34,
+  "regressions": 0,
+  "checks": {},
+  "skillActivated": null,
+  "valeInvocations": 4,
+  "numTurns": 23,
+  "durationMs": 230158,
+  "costUsd": 1.0874092
+}

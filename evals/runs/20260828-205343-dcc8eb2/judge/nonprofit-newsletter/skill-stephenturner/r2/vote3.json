@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B reads marginally tighter, but it invents facts to answer the source's rhetorical questions (\"The village hasn't gone without water since\"), converts hedged claims about recurring gifts into flat assertions, and drops the hashtags. A cuts just as much padding while keeping the hedges, the first-person honesty, and every factual claim intact.",
+  "costUsd": 0.052611500000000005,
+  "valid": true
+}

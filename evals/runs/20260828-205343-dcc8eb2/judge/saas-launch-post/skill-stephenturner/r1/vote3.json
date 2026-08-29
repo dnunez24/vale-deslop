@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 5
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every number, quote, attribution hedge, and the hashtag block while cutting the hype, with consistent formatting. B drops the hashtags, converts sourced claims into unhedged first-person assertions, bolds only one of three bullets, and pads sentences with filler (\"day to day,\" \"quarter after quarter,\" \"for the first time\").",
+  "costUsd": 0.17159200000000002,
+  "valid": true
+}

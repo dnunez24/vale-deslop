@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 9
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A recasts sentences into varied, spoken-sounding prose and cuts filler wholesale, while preserving the source's hedges (\"could pay off,\" \"I'd argue\"). B keeps the stock opener and several vague connectives, and it quietly hardens hedged claims into assertions and swaps \"the market demands\" for \"customers want,\" costing it fidelity.",
+  "costUsd": 0.046379,
+  "valid": true
+}

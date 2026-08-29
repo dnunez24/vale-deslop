@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A varies its sentence shapes and keeps the source's claims, hedges, and link intact, despite one garbled clause about genetics. B reads cleaner but flatter, and it alters facts: it strips a URL parameter, turns \"some colleagues\" into one, invents \"two decades of stage-level EEG data,\" reattributes the 18 percent figure to Ridgeway, and drops hedging that the source needed.",
+  "costUsd": 0.1572075,
+  "valid": true
+}

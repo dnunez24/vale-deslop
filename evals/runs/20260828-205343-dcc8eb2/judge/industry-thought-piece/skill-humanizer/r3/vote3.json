@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A alters a direct quotation (\"transformative\" to \"disruptive\") and hardens hedged claims into flat assertions, overstating the source; it also leaves one bullet bolded and the rest plain. B keeps the quote, the automation-paradox term, and the source's calibrated uncertainty while still cutting the padding, in a more particular voice.",
+  "costUsd": 0.093217,
+  "valid": true
+}

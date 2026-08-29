@@ -56,6 +56,26 @@ run = "bun run scripts/regen-expected.ts"
 description = "Regenerate the rule table in README.md"
 run = "bun run scripts/regen-rule-table.ts"
 
+[tasks.eval]
+description = "Run the Vale Deslop vs. agent-skill eval (spends API credit)"
+run = "bun run scripts/eval-run.ts"
+
+[tasks."eval:vendor"]
+description = "Vendor the pinned competitor deslop skills into evals/skills"
+run = "bun run scripts/eval-vendor-skills.ts"
+
+[tasks."eval:measure"]
+description = "Recompute eval metrics from committed run artifacts"
+run = "bun run scripts/eval-measure.ts"
+
+[tasks."eval:report"]
+description = "Regenerate evals/REPORT.md from the committed results"
+run = "bun run scripts/eval-report.ts"
+
+[tasks."eval:verify"]
+description = "Fail if committed eval metrics or report drift from the artifacts"
+run = "bun run scripts/eval-measure.ts --check && bun run scripts/eval-report.ts --check"
+
 [tasks.ci]
 description = "Everything the pull-request workflow runs"
 depends = ["test", "lint:prose", "lint:md", "build"]

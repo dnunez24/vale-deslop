@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A preserves every claim, number, and the URL exactly while reading as continuous prose with varied sentence lengths and honest hedging. B alters the reference link, drops the containerization comparison, and invents a detail (\"no one can date it\"), and its rhetorical-question paragraph and retained stock phrasing keep it stiffer.",
+  "costUsd": 0.043480500000000005,
+  "valid": true
+}

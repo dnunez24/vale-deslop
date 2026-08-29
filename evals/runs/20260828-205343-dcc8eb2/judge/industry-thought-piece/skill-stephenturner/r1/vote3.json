@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 9,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A turns the buzzword pile into quoted vendor vocabulary, so the joke survives instead of being sanded off, and its sentences vary in length and shape throughout. B leaves behind an addressed-to-the-reader aside and a few conversions that read stiffly (\"That should surprise procurement teams\" inverts the source's hedge; \"So few companies budget...\" lands as a stranded fragment).",
+  "costUsd": 0.06285400000000001,
+  "valid": true
+}

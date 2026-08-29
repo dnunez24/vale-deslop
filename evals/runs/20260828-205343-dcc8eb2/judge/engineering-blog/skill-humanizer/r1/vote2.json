@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims, link, and calibrated uncertainty intact while still cutting the padding, and its voice has more specific texture (\"hand-rolling its own backpressure,\" \"from guessing to measuring to trusting the thing\"). A is clean but flatter, drops a claim and the link's tracking parameters, and hardens the source's hedged results into assertions it didn't support.",
+  "costUsd": 0.1566065,
+  "valid": true
+}

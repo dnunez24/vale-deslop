@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 9,
+    "trust": 8,
+    "authenticity": 9,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B varies sentence length and cadence like a person writing, keeps the source's hashtags and quoted \"unrealistic,\" and handles the question stack without inventing facts. A is competent but flatter, drops the hashtags, breaks bold formatting mid-list, and turns two source questions into asserted claims (\"The village hadn't gone this long without water before\") that the source never makes.",
+  "costUsd": 0.1237385,
+  "valid": true
+}

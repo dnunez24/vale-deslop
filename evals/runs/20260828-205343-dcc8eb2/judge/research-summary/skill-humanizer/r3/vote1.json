@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every claim, number, and the URL intact while writing with a real voice (\"Small studies have a habit of producing effects that disappear at scale\"); B trims puffery more cleanly but alters the link, drops a claim, invents \"reviewed two decades of stage-level EEG data,\" and downgrades \"some colleagues\" to \"one colleague.\"",
+  "costUsd": 0.16339750000000003,
+  "valid": true
+}

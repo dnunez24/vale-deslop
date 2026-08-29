@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 9,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B cuts the filler while keeping a specific human voice and varied sentence length, and preserves every fact, the hashtags, and the bullet formatting. A is tidy but flatter, drops the hashtags, breaks bold on two bullets, softens one claim, and invents a fact by turning a rhetorical question into an assertion about how long the village went without water.",
+  "costUsd": 0.1767165,
+  "valid": true
+}

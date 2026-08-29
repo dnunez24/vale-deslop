@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 9,
+    "rhythm": 9,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A rebuilds sentences rather than trimming them, so its rhythm varies and the voice sounds like one person, and it keeps every number and the hashtags. B leaves flat stubs, breaks its own bullet formatting, drops the hashtags, softens \"changes everything\" to \"changes daily routines,\" and invents an answer to a question the source only asked.",
+  "costUsd": 0.166536,
+  "valid": true
+}

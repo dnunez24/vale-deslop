@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 9,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps every substantive claim intact while converting the source's rhetorical questions and hedge-stacks into assertions with varied sentence lengths. B reads cleanly in spots but alters a direct quotation (\"transformative technology\" becomes \"we have no choice\"), flips the retraining-budget logic, and leaves a self-referential sentence about what the piece is attempting.",
+  "costUsd": 0.1493545,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims intact — the full URL, \"some colleagues,\" the hedges that were genuinely warranted — while sounding like a specific team wrote it. A is tighter but alters the link, changes plural colleagues to one, reattributes the 18 percent figure to Ridgeway's own data, and flattens real uncertainty into flat assertion.",
+  "costUsd": 0.15762249999999997,
+  "valid": true
+}

@@ -16,3 +16,5 @@ reinstalls
 maintainer's
 repo
 configs
+[Ee]val
+[Ee]vals
