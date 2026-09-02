@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/dnunez24/vale-deslop/compare/vale-deslop-v1.1.0...vale-deslop-v1.1.1) (2026-09-02)
+
+
+### Bug Fixes
+
+* **sync:** document archive naming requirement for vale sync ([#5](https://github.com/dnunez24/vale-deslop/issues/5)) ([f6080ad](https://github.com/dnunez24/vale-deslop/commit/f6080add5bfb3c580bda4b98692e5250d4ff4efd))
+
 ## [1.1.0](https://github.com/dnunez24/vale-deslop/compare/vale-deslop-v1.0.0...vale-deslop-v1.1.0) (2026-08-29)
 
 
