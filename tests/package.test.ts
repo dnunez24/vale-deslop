@@ -9,10 +9,14 @@ const buildScript = join(root, "scripts", "build-package.sh");
 
 const buildDir = mkdtempSync(join(tmpdir(), "deslop-build-"));
 const consumeDir = mkdtempSync(join(tmpdir(), "deslop-consume-"));
+const remoteDir = mkdtempSync(join(tmpdir(), "deslop-remote-"));
+const mismatchDir = mkdtempSync(join(tmpdir(), "deslop-mismatch-"));
 
 afterAll(() => {
   rmSync(buildDir, { recursive: true, force: true });
   rmSync(consumeDir, { recursive: true, force: true });
+  rmSync(remoteDir, { recursive: true, force: true });
+  rmSync(mismatchDir, { recursive: true, force: true });
 });
 
 describe("distributable package", () => {
@@ -89,5 +93,119 @@ describe("distributable package", () => {
     >;
     const checks = (results["sample.md"] ?? []).map((a) => a.Check);
     expect(checks).toContain("Deslop.AnaphoraRun");
+  });
+});
+
+describe("remote package install", () => {
+  async function run(cmd: string[], cwd: string) {
+    const proc = Bun.spawn({ cmd, cwd, stdout: "pipe", stderr: "pipe" });
+    const [stdout, stderr, exitCode] = await Promise.all([
+      new Response(proc.stdout).text(),
+      new Response(proc.stderr).text(),
+      proc.exited,
+    ]);
+    return { stdout, stderr, exitCode };
+  }
+
+  it("installs from an HTTP URL", async () => {
+    const bytes = await Bun.file(join(buildDir, "Deslop.zip")).arrayBuffer();
+    const server = Bun.serve({
+      port: 0,
+      fetch(req) {
+        const pathname = new URL(req.url).pathname;
+        if (pathname === "/Deslop.zip") {
+          return new Response(bytes, { headers: { "content-type": "application/zip" } });
+        }
+        return new Response("Not Found", { status: 404 });
+      },
+    });
+
+    try {
+      const cfgPath = join(remoteDir, ".vale.ini");
+      writeFileSync(
+        cfgPath,
+        `StylesPath = styles\nMinAlertLevel = suggestion\nPackages = http://127.0.0.1:${server.port}/Deslop.zip\n\n[*.md]\nBasedOnStyles = Deslop\n`,
+      );
+
+      const sync = await run(["vale", "--no-global", `--config=${cfgPath}`, "sync"], remoteDir);
+      expect(sync.exitCode, sync.stderr).toBe(0);
+
+      const scriptPath = join(remoteDir, "styles", "config", "scripts", "AnaphoraRun.tengo");
+      expect(Bun.file(scriptPath).size).toBeGreaterThan(0);
+
+      const sample = "You should note this. You should note that. You should note the other.\n";
+      writeFileSync(join(remoteDir, "sample.md"), sample);
+
+      const lint = await run(
+        ["vale", "--no-global", `--config=${cfgPath}`, "--output=JSON", "sample.md"],
+        remoteDir,
+      );
+      const results = JSON.parse(lint.stdout) as Record<string, Array<{ Check: string }>>;
+      const checks = (results["sample.md"] ?? []).map((a) => a.Check);
+      expect(checks).toContain("Deslop.AnaphoraRun");
+    } finally {
+      server.stop(true);
+    }
+  });
+
+  it("fails when the URL file name doesn't match the archive root", async () => {
+    const bytes = await Bun.file(join(buildDir, "Deslop.zip")).arrayBuffer();
+    const server = Bun.serve({
+      port: 0,
+      fetch(req) {
+        const pathname = new URL(req.url).pathname;
+        if (pathname === "/vale-deslop-v1.0.0.zip") {
+          return new Response(bytes, { headers: { "content-type": "application/zip" } });
+        }
+        return new Response("Not Found", { status: 404 });
+      },
+    });
+
+    try {
+      const cfgPath = join(mismatchDir, ".vale.ini");
+      writeFileSync(
+        cfgPath,
+        `StylesPath = styles\nMinAlertLevel = suggestion\nPackages = http://127.0.0.1:${server.port}/vale-deslop-v1.0.0.zip\n\n[*.md]\nBasedOnStyles = Deslop\n`,
+      );
+
+      const sync = await run(["vale", "--no-global", `--config=${cfgPath}`, "sync"], mismatchDir);
+      expect(sync.exitCode).not.toBe(0);
+      expect(sync.stderr).toContain("no such file or directory");
+    } finally {
+      server.stop(true);
+    }
+  });
+});
+
+describe("install documentation", () => {
+  const assetName = "Deslop.zip";
+  const canonicalUrl = `https://github.com/dnunez24/vale-deslop/releases/latest/download/${assetName}`;
+
+  it("uploads the asset the docs point at", () => {
+    const workflowPath = join(root, ".github", "workflows", "release.yml");
+    const workflowText = readFileSync(workflowPath, "utf8");
+    expect(workflowText).toContain(`dist/${assetName}`);
+  });
+
+  it("points every documented install URL at the release asset", () => {
+    const files = ["README.md", "CONTRIBUTING.md"];
+    let foundCount = 0;
+
+    for (const file of files) {
+      const filePath = join(root, file);
+      const fileText = readFileSync(filePath, "utf8");
+      const urlRegex = /(?:^\s*Packages\s*=\s*|^\s*"url":\s*")([^"\s,]+)/gm;
+      let match;
+
+      while ((match = urlRegex.exec(fileText)) !== null) {
+        const url = match[1];
+        if (url.includes("github.com/dnunez24/vale-deslop")) {
+          expect(url, `${file}: ${url}`).toBe(canonicalUrl);
+          foundCount++;
+        }
+      }
+    }
+
+    expect(foundCount, "expected at least 2 documented install URLs").toBeGreaterThanOrEqual(2);
   });
 });
