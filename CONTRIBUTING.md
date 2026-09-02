@@ -70,7 +70,16 @@ Never hand-edit `CHANGELOG.md` or `package.json`'s `version`. release-please own
 ## Releasing (maintainers)
 
 Merging to `main` makes release-please open or update a release pull request.
-Merging that PR tags the release, cuts the GitHub Release, and uploads `Deslop.zip` as a release asset.
+Merging that PR tags the release as `vale-deslop-v<version>`, cuts the GitHub Release, and uploads `Deslop.zip` as a release asset.
+
+### Archive naming
+
+`vale sync` names a package after the zip file it downloads.
+It then looks inside that archive for a directory with the same name (`readPkg` and `installPkg` in Vale's `cmd/vale/sync.go`).
+`scripts/build-package.sh` satisfies the rule by zipping the `Deslop/` directory into `Deslop.zip`, so the release asset has to keep that exact name.
+Renaming the asset breaks `vale sync` for every consumer, and so does pointing anyone at GitHub's `/archive/refs/tags/<tag>.zip` source archive.
+GitHub extracts that one to a directory named `<repo>-<tag>`, which never matches the zip file name.
+The `install documentation` test in `tests/package.test.ts` guards the asset name in the docs and in `release.yml`.
 
 ### One-time repository settings
 

@@ -76,18 +76,19 @@ Four rules run as local Tengo scripts, and script-based rules that reference a l
 
 Pick one of three ways to point Vale at this package, then enable it with `BasedOnStyles`.
 
-### Pinned release (recommended)
+### Release asset (recommended)
 
 ```ini
 StylesPath = styles
 MinAlertLevel = suggestion
-Packages = https://github.com/dnunez24/vale-deslop/releases/download/v0.1.0/Deslop.zip
+Packages = https://github.com/dnunez24/vale-deslop/releases/latest/download/Deslop.zip
 
 [*.md]
 BasedOnStyles = Deslop
 ```
 
 Then run `vale sync`.
+To pin a version instead of tracking the newest release, replace `latest/download` with `download/` plus a tag from the [releases page](https://github.com/dnunez24/vale-deslop/releases), as in `https://github.com/dnunez24/vale-deslop/releases/download/vale-deslop-v1.0.0/Deslop.zip`.
 
 ### Bare registry name
 
@@ -117,6 +118,18 @@ BasedOnStyles = Deslop
 
 The package doesn't enable itself: `BasedOnStyles = Deslop` in the consuming project's own
 `.vale.ini` is what turns it on.
+
+### The GitHub source archive isn't installable
+
+The `Deslop.zip` release asset is the only archive `vale sync` can install.
+The `Source code (zip)` link that GitHub shows on every release, `https://github.com/dnunez24/vale-deslop/archive/refs/tags/<tag>.zip`, fails like this:
+
+```text
+lstat /tmp/vale-deslop-v1.0.087656/vale-deslop-v1.0.0: no such file or directory
+```
+
+Vale names a package after its zip file, then looks inside the archive for a directory of that same name.
+GitHub names the directory inside a source archive `<repo>-<tag>`, which never matches the file name, so `vale sync` exits 2 and installs nothing.
 
 ## Configuration
 
