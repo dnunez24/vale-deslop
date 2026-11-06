@@ -1,5 +1,7 @@
+# `.agents`, `.claude`, and `.omp` skills/openspec-* are written by `openspec init|update`;
+# edits would be overwritten on the next update.
 [global]
-exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md", "evals"]
+exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md", "evals", ".agents/skills/openspec-*", ".claude/skills/openspec-*", ".omp/skills/openspec-*"]
 respect-gitignore = true
 line-length = 100
 
