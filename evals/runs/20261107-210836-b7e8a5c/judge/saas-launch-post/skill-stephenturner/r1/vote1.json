@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 6,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "B",
+  "reason": "B reads cleaner and cuts the leftover filler that A keeps, including \"excellence, collaboration, and innovation,\" the \"Ask yourself\" stack of questions and \"We're thrilled.\" B does add some claims that aren't in the source, such as \"learn in an afternoon,\" \"without a manual\" and \"at launch,\" and it softens a few others; that costs it on fidelity, but not enough to beat A's flatter prose.",
+  "costUsd": 0.07890620000000001,
+  "valid": true
+}

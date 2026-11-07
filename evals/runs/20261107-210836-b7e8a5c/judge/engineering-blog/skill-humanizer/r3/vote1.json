@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and stays closer to the source. B reads a little more smoothly but adds filler (\"The reaction has been strong\", \"there were hurdles\") and makes small meaning changes, including \"for her\", \"as far as we know\", and a softer claim about API surface area.",
+  "costUsd": 0.0811312,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A is tighter and sounds more like one person wrote it. It merges repetitive passages and varies the sentence rhythm. B stays closer to the source but keeps more of its stiff structure. A costs a little fidelity: it softens the claim about defining the decade and drops the 'automation paradox' label. It still reads better overall.",
+  "costUsd": 0.0500396,
+  "valid": true
+}

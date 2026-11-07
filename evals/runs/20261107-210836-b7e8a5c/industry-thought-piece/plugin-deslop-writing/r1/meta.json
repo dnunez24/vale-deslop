@@ -1,0 +1,28 @@
+{
+  "doc": "industry-thought-piece",
+  "arm": "plugin-deslop-writing",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/industry-thought-piece/plugin-deslop-writing/r1/output.md",
+  "words": 994,
+  "retention": 0.87,
+  "alerts": 6,
+  "alertsPer1k": 6.04,
+  "reduction": 0.89,
+  "rulesFiring": 4,
+  "rulesCleared": 28,
+  "regressions": 0,
+  "checks": {
+    "Deslop.MarketingAdjectives": 1,
+    "Deslop.SweepingClaims": 2,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.BoldFirstBullet": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 4,
+  "numTurns": 8,
+  "durationMs": 35312,
+  "costUsd": 0.16378500000000001
+}

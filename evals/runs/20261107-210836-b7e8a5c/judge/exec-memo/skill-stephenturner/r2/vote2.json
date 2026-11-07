@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites keep every fact and number. B opens by naming the three bets, and its sentences vary more in length and shape. A reads flatter, keeps more of the source's padding, and drops the bold labels on the bullets.",
+  "costUsd": 0.0475106,
+  "valid": true
+}

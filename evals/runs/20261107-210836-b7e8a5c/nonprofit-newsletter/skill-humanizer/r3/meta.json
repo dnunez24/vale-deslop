@@ -1,0 +1,32 @@
+{
+  "doc": "nonprofit-newsletter",
+  "arm": "skill-humanizer",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/nonprofit-newsletter/skill-humanizer/r3/output.md",
+  "words": 922,
+  "retention": 0.96,
+  "alerts": 8,
+  "alertsPer1k": 8.68,
+  "reduction": 0.87,
+  "rulesFiring": 8,
+  "rulesCleared": 25,
+  "regressions": 2,
+  "checks": {
+    "Deslop.VagueAttribution": 1,
+    "Deslop.SweepingClaims": 1,
+    "Deslop.GrandioseStakes": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.SentenceRhythm": 1,
+    "Deslop.PedagogicalVoice": 1,
+    "Deslop.Subjectivity": 1,
+    "Deslop.HashtagBlock": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 26822,
+  "costUsd": 0.1650088
+}

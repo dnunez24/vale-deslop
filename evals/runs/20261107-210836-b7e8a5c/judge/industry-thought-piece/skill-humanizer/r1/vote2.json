@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 9
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A is tighter and more direct, and it removes the rhetorical-question cluster and the \"Everyone knows\" filler. It does lose some nuance: it states the narrow-pilot finding as fact when the source hedged it, and it drops a few qualifiers. B keeps more of the source's claims, but it's wordier and keeps more of the stock phrasing.",
+  "costUsd": 0.08567620000000001,
+  "valid": true
+}

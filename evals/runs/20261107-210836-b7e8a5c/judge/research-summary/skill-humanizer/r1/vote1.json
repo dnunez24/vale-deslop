@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A has more varied rhythm and a clearer voice, especially in the background and closing sections, though it keeps an awkward AI-disclosure caveat and drops the name \"replication paradox.\" B stays closer to the source and handles the caveat better, but it reads flatter and keeps the last paragraph almost word for word.",
+  "costUsd": 0.0896212,
+  "valid": true
+}

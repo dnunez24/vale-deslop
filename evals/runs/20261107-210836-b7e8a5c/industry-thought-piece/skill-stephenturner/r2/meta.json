@@ -1,0 +1,32 @@
+{
+  "doc": "industry-thought-piece",
+  "arm": "skill-stephenturner",
+  "repeat": 2,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/industry-thought-piece/skill-stephenturner/r2/output.md",
+  "words": 1105,
+  "retention": 0.97,
+  "alerts": 9,
+  "alertsPer1k": 8.14,
+  "reduction": 0.85,
+  "rulesFiring": 8,
+  "rulesCleared": 24,
+  "regressions": 0,
+  "checks": {
+    "Deslop.WordEcho": 1,
+    "Deslop.SweepingClaims": 2,
+    "Deslop.MarketingAdjectives": 1,
+    "Deslop.AIBuzzWords": 1,
+    "Deslop.VagueAttribution": 1,
+    "Deslop.AnaphoraRun": 1,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.MagicAdverbs": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 29317,
+  "costUsd": 0.1391922
+}

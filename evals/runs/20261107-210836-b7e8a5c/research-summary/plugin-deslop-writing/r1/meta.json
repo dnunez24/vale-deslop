@@ -1,0 +1,29 @@
+{
+  "doc": "research-summary",
+  "arm": "plugin-deslop-writing",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/research-summary/plugin-deslop-writing/r1/output.md",
+  "words": 1077,
+  "retention": 0.97,
+  "alerts": 6,
+  "alertsPer1k": 5.57,
+  "reduction": 0.91,
+  "rulesFiring": 5,
+  "rulesCleared": 32,
+  "regressions": 0,
+  "checks": {
+    "Deslop.WordEcho": 1,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.SignpostedConclusion": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 3,
+  "numTurns": 7,
+  "durationMs": 34269,
+  "costUsd": 0.17902739999999998
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "Both rewrites keep every fact, number and owner. A opens by naming the three bets, cuts the leftover filler more cleanly and has more specific wording, such as \"different kinds of roles\" where B has the vague \"new approaches.\" B also has a few awkward spots, like \"That means three bets in one quarter.\"",
+  "costUsd": 0.07993620000000001,
+  "valid": true
+}

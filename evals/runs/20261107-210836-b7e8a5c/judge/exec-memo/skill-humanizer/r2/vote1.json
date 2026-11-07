@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both keep every fact, number and owner. B wins because it opens with the three bets, uses a first-person voice that sounds like a specific author, and tightens the budget and results passages. A has a few awkward lines, such as \"That means three bets in one quarter.\"",
+  "costUsd": 0.0794812,
+  "valid": true
+}

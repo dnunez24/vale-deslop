@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B opens with the GA announcement, varies its sentence length more, and has no filler like A's \"We're thrilled with the results.\" A keeps the source's hedges and generalization claim a little more faithfully, but that edge doesn't outweigh B's cleaner prose.",
+  "costUsd": 0.0488392,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A removes the hype more cleanly and keeps every fact accurate. B leaves some residue in place: the 'Experts agree' appeal and the list of rhetorical questions. It also adds an unsupported 'we expect the results to be large' and states budget-line mappings the source only implies.",
+  "costUsd": 0.07849619999999999,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A reads more cleanly and drops the leftover filler B keeps, such as \"Experts agree on that point\" and \"no wasted pieces.\" B also handles the rhetorical questions awkwardly and changes what the mother's quote about her daughters' school attendance literally says.",
+  "costUsd": 0.0818062,
+  "valid": true
+}

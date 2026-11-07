@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "The two read about equally clean. A changes the meaning in several places: it reverses \"scope is the whole story,\" drops \"urgency\" and \"scale\" from the pitch descriptions, and credits the author's own prediction to executives. B keeps those claims and the three-mistakes structure.",
+  "costUsd": 0.0827912,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B has slightly more varied rhythm and a more natural voice. A cuts the puffery cleanly and adds nothing, while B introduces an unsupported claim (\"we expect the results to be large\") and has a few clunky run-on sentences.",
+  "costUsd": 0.07873619999999999,
+  "valid": true
+}

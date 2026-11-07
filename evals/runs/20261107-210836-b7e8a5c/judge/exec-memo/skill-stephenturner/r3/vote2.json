@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A cuts the leftover hype cleanly. B keeps traces of it, such as \"we expect the results to be large\" and \"it will hurt,\" and its budget-line sentences come out choppy. Both make small fidelity slips: A softens \"experts agree\" and drops the bold labels, and B adds a claim about results that the source never makes.",
+  "costUsd": 0.051661,
+  "valid": true
+}

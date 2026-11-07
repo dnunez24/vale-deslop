@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B reads more cleanly but invents product claims that aren't in the source (\"learn in an afternoon,\" \"without a manual\"), and it drops or changes others, such as \"most of the rest\" on Starter. A keeps every fact and number while removing most of the hype, though some filler remains (\"excellence, collaboration, and innovation,\" the \"ask yourself\" prompts).",
+  "costUsd": 0.053403,
+  "valid": true
+}

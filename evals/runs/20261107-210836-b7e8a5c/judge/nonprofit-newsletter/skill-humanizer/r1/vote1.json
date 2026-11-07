@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites are clean. A garbles the Mbita passage: it inverts the claim about the daughters' school attendance and folds the questions into an awkward non-answer. B keeps the source claims intact and reads naturally, though it leaves the stack of rhetorical questions in place.",
+  "costUsd": 0.0799662,
+  "valid": true
+}

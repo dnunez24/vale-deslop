@@ -1,0 +1,32 @@
+{
+  "doc": "saas-launch-post",
+  "arm": "plugin-deslop-writing",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/saas-launch-post/plugin-deslop-writing/r3/output.md",
+  "words": 762,
+  "retention": 0.88,
+  "alerts": 9,
+  "alertsPer1k": 11.81,
+  "reduction": 0.86,
+  "rulesFiring": 8,
+  "rulesCleared": 28,
+  "regressions": 1,
+  "checks": {
+    "Deslop.InventedConcept": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.TricolonAbstract": 1,
+    "Deslop.FalseRange": 1,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.EmDashEmphasis": 1,
+    "Deslop.HashtagBlock": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 3,
+  "numTurns": 7,
+  "durationMs": 29014,
+  "costUsd": 0.13939520000000002
+}

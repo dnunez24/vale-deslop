@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 9
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A is a bit tighter, but it drops or softens several claims: \"Everyone knows\" becomes \"is treated as,\" and the automation paradox, the \"simple\"/\"confident\" framing and the questions in the human-side section are gone or flattened. B keeps nearly all of the source's content while being just as clean.",
+  "costUsd": 0.050179400000000006,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B is tighter and keeps a specific first-person voice and the direct question to donors, while A has a few clunky lines, like its opening and the founder section. A keeps slightly more of the source's detail (\"without exception\"), but B reads better overall.",
+  "costUsd": 0.0494442,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B cuts the slogan line and the repeated association/causation point. A keeps the slogan and gives it a meaning the source doesn't support (\"fast to measure\"). Both keep the facts about equally well, and B reads cleaner and tighter.",
+  "costUsd": 0.0864062,
+  "valid": true
+}

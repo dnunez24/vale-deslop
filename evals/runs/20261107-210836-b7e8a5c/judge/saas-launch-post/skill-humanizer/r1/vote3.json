@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A strips more of the hype (\"excellence, collaboration, and innovation\", the \"breakthrough\" line, the pile of rhetorical questions) while keeping every number and fact. B keeps more slop, like \"Ask yourself why…when your team will finally switch\", and gains only a little source wording, such as the title.",
+  "costUsd": 0.0685736,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both keep every fact, number, and link. B is tighter: it drops filler like A's \"The reaction has been strong\" and \"That left us with questions,\" and it lands the punchy beats more cleanly (\"The incidents stopped, and the pager went quiet\").",
+  "costUsd": 0.0490766,
+  "valid": true
+}

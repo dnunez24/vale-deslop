@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B reads more naturally. It handles the source's run of questions cleanly and keeps the mother's quote accurate, while A gets the school-attendance detail wrong and adds stiff lines like \"The model has no wasted pieces.\" B adds a small explanatory phrase and changes a couple of framings, but A's errors cost more.",
+  "costUsd": 0.07860619999999999,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites keep every fact and number. B puts the three bets in its first sentence, varies its sentence lengths more, and reads more cleanly. A has a few stiff spots, such as \"We chose three things over doing more.\"",
+  "costUsd": 0.0495306,
+  "valid": true
+}

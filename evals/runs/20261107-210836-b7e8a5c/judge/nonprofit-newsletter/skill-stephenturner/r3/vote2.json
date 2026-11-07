@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A drops the rhetorical-question run, the appeal to \"experts agree,\" the \"Ready, funded, moving\" slogan and the not-X-but-Y lines, so it reads more like one person writing. B stays closer to the source but keeps much of that boilerplate and adds some filler. A loses a little fidelity because it rewords the daughters' school-attendance line.",
+  "costUsd": 0.0817962,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B has more varied rhythm and tighter sentences, and it avoids A's added filler, such as \"We're thrilled with the results\" and \"That covers the core mechanism.\" Both are faithful to the source, but each has small slips: B leaves the stray follow-up question in and has the awkward line \"That left four questions,\" and A rewords the claim about downstream services pausing.",
+  "costUsd": 0.0516992,
+  "valid": true
+}

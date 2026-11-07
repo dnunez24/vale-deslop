@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and keeps more of the source's specifics, including the \"approval paradox\" term, the \"control tower\" image and the \"experts agree\" attribution. B drops those, adds hedges and filler such as \"We don't think you'll regret it,\" and keeps some stock phrasing like \"three pillars our team obsessed over.\"",
+  "costUsd": 0.07777619999999999,
+  "valid": true
+}

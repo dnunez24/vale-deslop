@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites keep the substance and cut the clichés. A invents an unsupported claim that \"we expect the results to be large\" and has a few clumsy lines, such as \"The core team has platform.\" B is cleaner and tighter, and it stays more faithful to the source.",
+  "costUsd": 0.0762712,
+  "valid": true
+}

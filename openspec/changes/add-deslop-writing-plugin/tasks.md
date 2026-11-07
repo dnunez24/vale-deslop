@@ -27,7 +27,7 @@
 
 - [x] 4.1 Add `plugin/plugin.json` (Agent Plugins 1.0), `plugin/.claude-plugin/plugin.json`, and the root `.claude-plugin/marketplace.json` (design decision 7); verify `claude plugin validate .` and `claude plugin validate ./plugin` pass, and `plugin/plugin.json` validates against `https://agent-plugins.org/schemas/1.0.0/plugin.schema.json`
 - [x] 4.2 Add a local marketplace in Claude Code and install `deslop`; verify `deslop-writing` is listed exactly once, and switch to `skills.sh.json` (design decision 7) if it's listed twice
-- [ ] 4.3 Verify discovery from the branch: `npx skills add dnunez24/vale-deslop#<branch> --list` lists only `deslop-writing`, and a `--copy` install contains `SKILL.md`, `deslop.vale.ini`, `references/`, and `Deslop/`
+- [x] 4.3 Verify discovery from the branch: `npx skills add dnunez24/vale-deslop#<branch> --list` lists only `deslop-writing`, and a `--copy` install contains `SKILL.md`, `deslop.vale.ini`, `references/`, and `Deslop/`
 - [x] 4.4 Add `extra-files` for the three version fields to `release-please-config.json`, set them to the current version, and add a test that every plugin and marketplace version equals `package.json`; verify the test fails when one manifest version is changed by hand
 - [x] 4.5 Add an install section to `README.md` for Claude Code (`/plugin marketplace add dnunez24/vale-deslop`), Agent Plugins clients, and `npx skills add dnunez24/vale-deslop`, and add a `CONTRIBUTING.md` note on the skill layout; verify `mise run lint:prose` and the `install documentation` test pass
 
@@ -42,10 +42,10 @@
 
 ## 6. Run the pre-registered plugin eval
 
-- [ ] 6.1 Commit groups 1 to 5, then run `ANTHROPIC_API_KEY=op://automation/vale-deslop-anthropic-api-key/credential op run -- bun run scripts/eval-preflight.ts` from a clean tree; verify that preflight passes, records auth method `api_key` and a `claude-opus-*` judge model, and that `git status` is clean.
+- [x] 6.1 Commit groups 1 to 5, then run `ANTHROPIC_API_KEY=op://automation/vale-deslop-anthropic-api-key/credential op run -- bun run scripts/eval-preflight.ts` from a clean tree; verify that preflight passes, records auth method `api_key` and a `claude-opus-*` judge model, and that `git status` is clean.
       Run 1 was recorded with a dirty working tree; the clean commit is what proves the criteria, prompts, skill, and config were fixed before the run
-- [ ] 6.2 Ask the user for approval before running, because this spends API credit; then run `ANTHROPIC_API_KEY=op://automation/vale-deslop-anthropic-api-key/credential op run -- mise run eval` with arms `control,skill-humanizer,skill-stephenturner,plugin-deslop-writing`, treatment `plugin-deslop-writing`, 3 repeats, and a $70 budget; verify that the manifest records the clean commit from 6.1, with no failed attempts other than the documented failure reasons
-- [ ] 6.3 Run `mise run eval:report` and `mise run eval:verify`, and update the evidence section of `README.md` to describe the advisory run and link the report, whatever the verdict; verify `mise run ci` passes
+- [x] 6.2 Ask the user for approval before running, because this spends API credit; then run `ANTHROPIC_API_KEY=op://automation/vale-deslop-anthropic-api-key/credential op run -- mise run eval` with arms `control,skill-humanizer,skill-stephenturner,plugin-deslop-writing`, treatment `plugin-deslop-writing`, 3 repeats, and a $70 budget; verify that the manifest records the clean commit from 6.1, with no failed attempts other than the documented failure reasons
+- [x] 6.3 Run `mise run eval:report` and `mise run eval:verify`, and update the evidence section of `README.md` to describe the advisory run and link the report, whatever the verdict; verify `mise run ci` passes
 
 ## 7. Integration checks
 

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "arm": "plugin-deslop-writing",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/engineering-blog/plugin-deslop-writing/r1/output.md",
+  "words": 854,
+  "retention": 0.9,
+  "alerts": 3,
+  "alertsPer1k": 3.51,
+  "reduction": 0.95,
+  "rulesFiring": 3,
+  "rulesCleared": 32,
+  "regressions": 1,
+  "checks": {
+    "Deslop.SentenceRhythm": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.AIReferrerParams": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 3,
+  "numTurns": 9,
+  "durationMs": 35675,
+  "costUsd": 0.1864992
+}

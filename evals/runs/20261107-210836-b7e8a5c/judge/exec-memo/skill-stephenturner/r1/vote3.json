@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both keep every fact and number. B reads more smoothly and sounds more natural. A has a few clunky spots, such as \"Platform's covers,\" the line it adds about the tradeoff (\"it will hurt\"), and a stiff opening announcement.",
+  "costUsd": 0.050348800000000006,
+  "valid": true
+}

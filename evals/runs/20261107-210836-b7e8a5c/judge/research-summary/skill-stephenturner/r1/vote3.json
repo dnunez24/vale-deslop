@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B cuts more of the leftover filler, such as the \"fast, consistent, real\" line and the repeated causation disclaimer, and reads more smoothly. A keeps a few more details, but its leftover slogans and repetition make it weaker to ship.",
+  "costUsd": 0.0504448,
+  "valid": true
+}

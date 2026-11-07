@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and drops more of the hype. B adds filler like \"genuinely new\" and \"no more and no less,\" keeps the teaser \"The answer might surprise you,\" and changes the stated values. Both keep the facts equally well, so A's cleaner prose decides it.",
+  "costUsd": 0.0499166,
+  "valid": true
+}

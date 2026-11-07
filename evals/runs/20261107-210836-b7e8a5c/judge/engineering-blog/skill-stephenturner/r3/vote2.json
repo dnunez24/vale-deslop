@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A is a little tighter, but it changes some meanings, such as \"we got speed along the way\" and \"I may walk through,\" and it drops the bold list labels. B stays closer to the source's claims and structure and has a more natural voice, though it adds a little filler like \"The reaction has been strong.\"",
+  "costUsd": 0.0806712,
+  "valid": true
+}

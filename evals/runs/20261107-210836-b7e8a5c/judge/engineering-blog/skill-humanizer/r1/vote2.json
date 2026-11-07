@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites are clean and keep every number and the link. B keeps the source's hedges, such as \"probably the smallest\" and the note that this \"may have changed,\" and it reads more naturally. A states that claim as flat fact and has awkward spots like \"the hard parts and the openings.\"",
+  "costUsd": 0.08101119999999999,
+  "valid": true
+}

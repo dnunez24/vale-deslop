@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and more direct, and it keeps specifics such as \"approval paradox\", \"experts agree\" and the control-tower line. B is wordier, adds claims the source doesn't make (for example, that teams won't lose requests anymore), and opens with a filler line.",
+  "costUsd": 0.0503824,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B reads slightly more natural, but it changes some meanings: it says the platform work is the \"bigger reason\" for the bets, says every internal tool will \"run on\" the platform instead of integrate with it, and changes \"the market\" to \"customers.\" A is nearly as clean and keeps the source's claims intact.",
+  "costUsd": 0.08037620000000001,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and drops more of the filler, while B keeps clichés like \"The answer might surprise you\" and \"the platform your team has been waiting for\" and adds a claim about the team's values that the source doesn't make. Both keep the facts about equally well, with small omissions in each.",
+  "costUsd": 0.0787712,
+  "valid": true
+}

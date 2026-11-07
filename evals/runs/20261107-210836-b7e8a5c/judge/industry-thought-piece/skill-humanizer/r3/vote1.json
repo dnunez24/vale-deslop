@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A is tighter and reads more like one person's voice, with better sentence variety. B stays closer to the source, but it keeps more of the original's padding. A loses a little fidelity by softening \"will define\" to \"may shape\" and \"the whole story\" to \"most of it,\" but the writing gain outweighs that.",
+  "costUsd": 0.08807620000000001,
+  "valid": true
+}

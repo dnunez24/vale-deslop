@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims intact: the \"approval paradox\" term, the \"no catch\" line, and the flat claims about market dominance and fastest onboarding. A drops some of these and softens others with hedges, and its prose reads more generic. B has a few leftover rhetorical questions, but its voice is more specific and its sentences more varied.",
+  "costUsd": 0.0759762,
+  "valid": true
+}

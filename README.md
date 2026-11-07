@@ -215,6 +215,7 @@ A project running both must disable `proselint.Typography` (see the rationale in
 ## Evidence
 
 [`evals/REPORT.md`](evals/REPORT.md) compares this package against two popular third-party deslop skills ([`blader/humanizer`](https://github.com/blader/humanizer) and [`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop)) on a pre-registered corpus, with a pre-registered pass-or-fail verdict.
+The latest run is the advisory run: the `deslop-writing` skill uses Vale as advice and reports its kept alerts, and the report states the verdict whether or not the hypothesis held.
 No numbers here: they change on every re-measure.
 
 ## Contributing

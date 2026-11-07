@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B reads more smoothly and drops the empty puffery. A keeps a vague \"we expect the results to be large\" claim that the source doesn't support, and it has awkward lines like \"The core team has platform.\" Both keep every number and fact, but B's ownership and budget sentences are clearer.",
+  "costUsd": 0.0478968,
+  "valid": true
+}

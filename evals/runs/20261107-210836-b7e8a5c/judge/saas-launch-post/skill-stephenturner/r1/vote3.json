@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 6,
+    "rhythm": 7,
+    "trust": 5,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A removes the hype B keeps: the \"excellence, collaboration, and innovation\" line, the rhetorical questions turned into \"ask yourself,\" the \"experts agree\" appeal, and the \"thrilled with this breakthrough\" gush. A drops the \"approval paradox\" and \"control tower\" lines and adds a few soft claims, but its writing is clearly better, which outweighs that small fidelity loss.",
+  "costUsd": 0.09502659999999999,
+  "valid": true
+}

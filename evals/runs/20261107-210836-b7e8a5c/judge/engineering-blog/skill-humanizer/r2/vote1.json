@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B has tighter rhythm and a stronger opening, but it closes on a stray question to the reader, its \"four questions\" list hangs unanswered, and \"still an open question\" is more doubtful than the source's claim about generalizing. A is slightly flatter and keeps the filler \"We're thrilled,\" but it stays closer to the source's claims and reads cleaner at the end.",
+  "costUsd": 0.08616120000000001,
+  "valid": true
+}

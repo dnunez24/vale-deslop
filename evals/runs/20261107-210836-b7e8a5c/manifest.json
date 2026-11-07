@@ -1,0 +1,51 @@
+{
+  "runId": "20261107-210836-b7e8a5c",
+  "createdAt": "2026-11-07T21:08:36.618Z",
+  "git": {
+    "sha": "b7e8a5c",
+    "dirty": false
+  },
+  "vale": {
+    "version": "vale version 3.26.0",
+    "unionRuns": 20,
+    "packageZipSha256": "38a93a60429224c5a25a732225786f4547627e5e6b51c7b54e6be2efba990eac"
+  },
+  "models": {
+    "actor": "claude-sonnet-5-5",
+    "judge": "claude-opus-5-5"
+  },
+  "authMethod": "api_key",
+  "skills": [
+    {
+      "armId": "skill-humanizer",
+      "repo": "blader/humanizer",
+      "sha": "e2e92e7b4b8229253ed5c8e81dc65463fdeddda5",
+      "skillSha256": "fb510431863411e8a20bacf05664c92ee303a2e258a349840d4222ae7f337982"
+    },
+    {
+      "armId": "skill-stephenturner",
+      "repo": "stephenturner/skill-deslop",
+      "sha": "a906154bef375d9d49ed2ad7da13b2db16f0d3d2",
+      "skillSha256": "c14c98daa2535a10144b7cba9f6c8e58fbe8cb86ec7834024844b763ca8a27e1"
+    },
+    {
+      "armId": "plugin-deslop-writing",
+      "repo": "dnunez24/vale-deslop",
+      "sha": "b7e8a5c",
+      "skillSha256": "6616d1823901604a2a79b59c9ed6b397a0a135e1a36be72edae385e1f890a580"
+    }
+  ],
+  "config": {
+    "repeats": 3,
+    "judgeVotes": 3,
+    "maxIterations": 8,
+    "budgetUsd": 70,
+    "treatmentArm": "plugin-deslop-writing"
+  },
+  "preflight": {
+    "permissionMode": "bypassPermissions",
+    "toolDenyWorks": true,
+    "jsonSchema": true,
+    "skillIsolated": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A has tighter, more varied prose and cuts filler like 'lightweight yet rigorous' and the stilted 'quickly and consistently... real' line, which B keeps. Fidelity is about the same: A drops the 'replication paradox' label, and B drops the question about publishing the appendix.",
+  "costUsd": 0.050440799999999994,
+  "valid": true
+}

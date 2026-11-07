@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B keeps the source's claims intact. It still credits the 18% figure to earlier studies, and it keeps the filing-cabinet analogy. A attributes that figure to this study, adds a 'first direct test' claim and drops the analogy. B's prose also varies more and sounds more like a person wrote it.",
+  "costUsd": 0.0831612,
+  "valid": true
+}

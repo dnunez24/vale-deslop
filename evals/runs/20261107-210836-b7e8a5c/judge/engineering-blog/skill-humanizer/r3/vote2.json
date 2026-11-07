@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites keep all the facts and the link. B is a little tighter. It cuts leftover filler such as \"Even so, there were hurdles\" and \"The reaction has been strong,\" and it gives the \"Gone. Silent. Boring.\" beat a cleaner replacement.",
+  "costUsd": 0.0820312,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B folds the source's rhetorical questions and staccato fragments into natural prose. A turns the questions into a stiff list (\"That leaves four questions\"). Both keep the facts and the link, and each adds a small detail the source doesn't have. A is a little tighter, but B reads more like one person wrote it.",
+  "costUsd": 0.0834962,
+  "valid": true
+}

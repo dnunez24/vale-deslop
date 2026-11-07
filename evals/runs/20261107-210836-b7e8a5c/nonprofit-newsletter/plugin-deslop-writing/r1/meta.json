@@ -1,0 +1,30 @@
+{
+  "doc": "nonprofit-newsletter",
+  "arm": "plugin-deslop-writing",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/nonprofit-newsletter/plugin-deslop-writing/r1/output.md",
+  "words": 915,
+  "retention": 0.95,
+  "alerts": 6,
+  "alertsPer1k": 6.56,
+  "reduction": 0.9,
+  "rulesFiring": 6,
+  "rulesCleared": 25,
+  "regressions": 0,
+  "checks": {
+    "Deslop.VagueAttribution": 1,
+    "Deslop.SweepingClaims": 1,
+    "Deslop.GrandioseStakes": 1,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.HashtagBlock": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 4,
+  "numTurns": 7,
+  "durationMs": 33135,
+  "costUsd": 0.1401884
+}

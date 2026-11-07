@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 6,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and removes more of the stock phrasing, such as the \"three pillars\" line and the \"excellence, collaboration, innovation\" triad, while keeping every number and claim. B adds filler and hedges and still carries some of the source's boilerplate.",
+  "costUsd": 0.0498424,
+  "valid": true
+}

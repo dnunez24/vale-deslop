@@ -1,0 +1,31 @@
+{
+  "doc": "nonprofit-newsletter",
+  "arm": "skill-stephenturner",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/nonprofit-newsletter/skill-stephenturner/r3/output.md",
+  "words": 897,
+  "retention": 0.93,
+  "alerts": 9,
+  "alertsPer1k": 10.03,
+  "reduction": 0.85,
+  "rulesFiring": 7,
+  "rulesCleared": 25,
+  "regressions": 1,
+  "checks": {
+    "Deslop.WordEcho": 2,
+    "Deslop.Emoji": 2,
+    "Deslop.GrandioseStakes": 1,
+    "Deslop.ScareQuotes": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.Subjectivity": 1,
+    "Deslop.HashtagBlock": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 23046,
+  "costUsd": 0.119161
+}

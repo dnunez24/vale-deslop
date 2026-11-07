@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "The two read about equally well, and B's voice is a little more personal. But B attributes things to people who never said them (\"Executives tell me\"), drops \"scale\" and \"urgency\" from lists, cuts the studies/experts attribution, and flips the closing point about scope. A keeps every claim intact.",
+  "costUsd": 0.0831662,
+  "valid": true
+}

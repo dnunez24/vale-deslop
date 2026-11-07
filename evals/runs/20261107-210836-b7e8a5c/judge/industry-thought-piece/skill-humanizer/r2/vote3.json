@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B is tighter, with more varied rhythm and a more human voice (\"Every one.\"). A adds framing the source lacks, like \"The people come first…\". B softens \"will define\" to \"may define,\" swaps \"the market\" for \"investors\" and cuts the spreadsheet line, but its prose is clearly better, so it wins narrowly.",
+  "costUsd": 0.10548260000000001,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "Both read cleanly and sound similar, though B has a slightly stronger personal voice. B leaves out \"scale\" and \"urgency\" and credits the author's labor prediction to executives. It also flips the source's line that scope is \"the whole story.\" A keeps the content intact.",
+  "costUsd": 0.0832062,
+  "valid": true
+}

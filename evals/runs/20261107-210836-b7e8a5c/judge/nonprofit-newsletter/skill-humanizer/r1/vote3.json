@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "A cuts more filler, but it reverses the sentence about the daughters missing school, invents an answer to the source's questions, and adds \"no wasted pieces.\" B keeps a few more stock phrases, such as the list of rhetorical questions, but it stays true to every claim. B is the safer one to ship.",
+  "costUsd": 0.050673800000000005,
+  "valid": true
+}

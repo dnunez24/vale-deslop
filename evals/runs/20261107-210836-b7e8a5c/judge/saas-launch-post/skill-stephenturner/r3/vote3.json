@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "The two rewrites read about equally well. B keeps more of the source: the named \"approval paradox\", the control-tower image, the single-source-of-truth framing and the \"not because we got lucky\" point. A drops some of these and adds weak lines like \"best platform in its class.\" B still has a few holdovers, including \"Experts agree\" and the \"excellence, collaboration, and innovation\" filler.",
+  "costUsd": 0.0510412,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A keeps more of the source, including the filing-cabinet analogy and the 18 percent figure credited to prior studies, and it reads with more voice. B reassigns the 18 percent result to \"our study\" and adds a \"first direct test\" claim the source doesn't make.",
+  "costUsd": 0.08194620000000001,
+  "valid": true
+}

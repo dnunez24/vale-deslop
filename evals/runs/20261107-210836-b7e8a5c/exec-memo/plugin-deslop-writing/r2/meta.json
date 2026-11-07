@@ -1,0 +1,28 @@
+{
+  "doc": "exec-memo",
+  "arm": "plugin-deslop-writing",
+  "repeat": 2,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/exec-memo/plugin-deslop-writing/r2/output.md",
+  "words": 878,
+  "retention": 0.93,
+  "alerts": 5,
+  "alertsPer1k": 5.69,
+  "reduction": 0.91,
+  "rulesFiring": 4,
+  "rulesCleared": 27,
+  "regressions": 0,
+  "checks": {
+    "Deslop.FalseAgency": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.ScareQuotes": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": 4,
+  "numTurns": 7,
+  "durationMs": 30062,
+  "costUsd": 0.14196240000000002
+}

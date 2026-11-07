@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "A has slightly sharper rhythm and keeps more of the source, including the appendix offer, but it also keeps a chatbot tracking parameter in the link and an \"AI wrote this\" disclaimer. B removes both of those artifacts and reads cleanly throughout, which makes it the better version to ship.",
+  "costUsd": 0.0513416,
+  "valid": true
+}

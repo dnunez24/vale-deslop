@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B reads with more varied rhythm, but it adds an example the source doesn't have (50 vs. 500 people), keeps the \"written by an AI\" line and the chatgpt tracking parameter in the link, and turns \"Fast. Consistent. Real.\" into an awkward sentence. A is cleaner and stays closer to the source.",
+  "costUsd": 0.0493784,
+  "valid": true
+}

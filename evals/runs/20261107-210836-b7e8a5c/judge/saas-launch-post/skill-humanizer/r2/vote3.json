@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 6,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B is more direct and keeps details that A drops, including the \"approval paradox\" name and \"no catch\". A leans on repeated hedges like \"we think\" and \"we believe\" that soften the copy, but B still holds on to a few leftover rhetorical questions.",
+  "costUsd": 0.0485084,
+  "valid": true
+}

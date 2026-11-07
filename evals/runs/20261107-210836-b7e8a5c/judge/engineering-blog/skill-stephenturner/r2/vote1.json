@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "The two rewrites read about equally well. B keeps more of the source: the bouncer analogy, the queue depth dropping, the bold list labels, and the hedge on the smallest API surface. A overstates that API claim and turns speed into a secondary concern, which the source didn't say. A's closing is a bit cleaner, but that doesn't make up for the fidelity gap.",
+  "costUsd": 0.08366620000000001,
+  "valid": true
+}

@@ -1,0 +1,33 @@
+{
+  "doc": "research-summary",
+  "arm": "skill-humanizer",
+  "repeat": 3,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/research-summary/skill-humanizer/r3/output.md",
+  "words": 1107,
+  "retention": 0.99,
+  "alerts": 12,
+  "alertsPer1k": 10.84,
+  "reduction": 0.83,
+  "rulesFiring": 9,
+  "rulesCleared": 28,
+  "regressions": 0,
+  "checks": {
+    "Deslop.WordEcho": 2,
+    "Deslop.InventedConcept": 1,
+    "Deslop.VagueAttribution": 2,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.PairedAdjectives": 2,
+    "Deslop.FalseRange": 1,
+    "Deslop.SignpostedConclusion": 1,
+    "Deslop.ScareQuotes": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 7,
+  "durationMs": 54461,
+  "costUsd": 0.2703922
+}

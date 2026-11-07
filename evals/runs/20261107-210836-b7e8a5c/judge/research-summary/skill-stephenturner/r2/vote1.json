@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "B has more varied rhythm and a more distinctive voice. It also adds claims the source doesn't make, such as the \"50 people… 500\" example, \"fast to measure\" and \"Nobody does yet,\" and it keeps the chatbot tracking parameter in the link. A is plainer and sticks closer to the source.",
+  "costUsd": 0.08684120000000001,
+  "valid": true
+}

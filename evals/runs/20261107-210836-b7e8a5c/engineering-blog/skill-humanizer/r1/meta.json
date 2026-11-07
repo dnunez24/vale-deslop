@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "arm": "skill-humanizer",
+  "repeat": 1,
+  "status": "ok",
+  "invalidReason": null,
+  "flags": [],
+  "outputPath": "runs/20261107-210836-b7e8a5c/engineering-blog/skill-humanizer/r1/output.md",
+  "words": 913,
+  "retention": 0.96,
+  "alerts": 3,
+  "alertsPer1k": 3.29,
+  "reduction": 0.95,
+  "rulesFiring": 3,
+  "rulesCleared": 31,
+  "regressions": 0,
+  "checks": {
+    "Deslop.BoldFirstBullet": 1,
+    "Deslop.AIReferrerParams": 1,
+    "Deslop.WhOpener": 1
+  },
+  "skillActivated": true,
+  "valeInvocations": null,
+  "numTurns": 5,
+  "durationMs": 27519,
+  "costUsd": 0.1902088
+}

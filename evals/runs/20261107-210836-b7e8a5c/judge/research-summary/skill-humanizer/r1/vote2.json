@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A reads more naturally, with more varied sentences and a clearer voice. B stays closer to the source: it keeps the term \"replication paradox\" and adds no framing of its own. A adds two small claims (\"split cleanly\", \"to avoid it\"), but on balance its better prose outweighs that.",
+  "costUsd": 0.05180560000000001,
+  "valid": true
+}

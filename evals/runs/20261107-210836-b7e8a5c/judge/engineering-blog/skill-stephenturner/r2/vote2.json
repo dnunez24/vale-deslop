@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "Both read cleanly and score about the same on style. A is more faithful: it keeps the bouncer analogy, the drop in queue depth, and the hedged \"smallest surface\" claim. B cuts some of those, adds its own claims (it says other designs \"left the rest to the application\"), and states the API-size claim with more certainty than the source does.",
+  "costUsd": 0.07912119999999999,
+  "valid": true
+}

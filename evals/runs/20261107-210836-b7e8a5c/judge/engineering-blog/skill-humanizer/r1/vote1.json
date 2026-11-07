@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "B is the one I'd ship. Both keep the facts, numbers and link. B is a little tighter and more direct: it opens with the general-availability announcement and turns the source's string of rhetorical questions into a plain statement. A keeps that question list as-is and runs slightly wordier.",
+  "costUsd": 0.14554799999999998,
+  "valid": true
+}

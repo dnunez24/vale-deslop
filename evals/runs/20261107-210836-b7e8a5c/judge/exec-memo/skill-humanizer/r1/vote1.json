@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A sounds more like a person wrote it: it names the budget lines directly, sets up the reader's four questions, and makes concrete staffing asks where B gives vague ones like \"look for new approaches.\" B stays a little closer to the source's wording, for example \"integrate every internal tool,\" but its phrasing is flatter and more repetitive.",
+  "costUsd": 0.0796512,
+  "valid": true
+}

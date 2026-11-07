@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both rewrites keep every fact and cut the filler. B reads a little more smoothly: it opens tighter, folds the four questions into one natural sentence, and avoids A's awkward possessive in \"Platform's covers\" and its meta \"this memo explains them\" opener.",
+  "costUsd": 0.0494088,
+  "valid": true
+}

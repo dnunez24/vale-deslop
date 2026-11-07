@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A is tighter and cuts more of the leftover padding. B keeps filler like \"The reaction has been strong\" and \"boring in the best way.\" B is slightly more faithful in small details (bolded list labels, the reader-facing follow-up offer), but A's cleaner prose outweighs that.",
+  "costUsd": 0.0491308,
+  "valid": true
+}

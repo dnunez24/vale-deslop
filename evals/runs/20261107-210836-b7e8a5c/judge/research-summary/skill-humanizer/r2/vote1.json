@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A has tighter, more varied prose and keeps every claim, link, and caveat, including the offer to publish the statistical appendix. B is wordier and flatter, drops the appendix offer, and alters the URL and the AI caveat, though removing the tracking parameter from the link is a reasonable cleanup.",
+  "costUsd": 0.0893962,
+  "valid": true
+}

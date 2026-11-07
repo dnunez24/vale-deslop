@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "B reads a little more naturally, but it drops the \"approval paradox\" name and the control-tower comparison. It also turns \"intuitive\" into a new claim that users need no training. A keeps every source claim intact and its prose is nearly as clean, so I'd ship A.",
+  "costUsd": 0.08401120000000001,
+  "valid": true
+}

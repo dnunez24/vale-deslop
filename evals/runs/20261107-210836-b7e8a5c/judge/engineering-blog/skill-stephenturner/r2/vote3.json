@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "The two read about equally well. A keeps more of the source: the bouncer analogy and the point that queue depth dropped are both still there. B cuts both, adds claims the source doesn't make (\"in our measurements,\" \"left the rest to the application\"), and makes speed a secondary concern when the source didn't rank it below predictability.",
+  "costUsd": 0.050661399999999995,
+  "valid": true
+}

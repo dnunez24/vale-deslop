@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B reads more like one person talking to their team. It drops the leftover hype that A keeps (\"we expect the results to be large,\" \"Experts agree\") and turns A's list of rhetorical questions into a single sentence. Both stay close to the source's facts, but B loses the bold list labels and drops \"discipline\" from the reliability point.",
+  "costUsd": 0.0791762,
+  "valid": true
+}

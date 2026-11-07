@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A is tighter and sticks closer to the source's claims. B has more personal voice, but it adds claims the source doesn't make (\"you have probably watched this at your own company,\" \"I've seen the same thing in industry after industry\"), and it turns the open questions into assertions, which changes their meaning.",
+  "costUsd": 0.0855462,
+  "valid": true
+}

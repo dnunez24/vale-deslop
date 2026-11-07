@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps more of the source. It retains the three-item lists (speed, certainty, scale; ambition, urgency, fear) and the \"scope is the whole story\" claim, which A drops or reverses. B also reads a bit punchier, though it holds onto the vague \"studies/experts\" attributions.",
+  "costUsd": 0.04894,
+  "valid": true
+}

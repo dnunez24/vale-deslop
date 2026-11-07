@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A reads tighter, and its sentence rhythm varies more. It drops a few minor descriptors (\"replication paradox\", \"ambitious/lightweight\"). B keeps more of the source's wording but drops the appendix offer and leaves in some stiff, padded phrasing, such as \"showed up quickly and consistently, and we believe it is real.\"",
+  "costUsd": 0.0873912,
+  "valid": true
+}

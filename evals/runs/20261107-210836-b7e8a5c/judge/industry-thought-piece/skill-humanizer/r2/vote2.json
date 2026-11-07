@@ -1,0 +1,27 @@
+{
+  "doc": "industry-thought-piece",
+  "baselineArm": "skill-humanizer",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 6
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "A",
+  "reason": "A is tighter and cuts more of the filler and stock transitions. B keeps padding like \"As I said earlier\" and \"without exception,\" and it adds framing that isn't in the source, such as \"The people come first.\" Each rewrite has small fidelity slips: A softens the \"will define\" prediction to \"may define\" and drops the spreadsheet line, while B adds \"messy.\" A reads cleaner overall.",
+  "costUsd": 0.050619,
+  "valid": true
+}

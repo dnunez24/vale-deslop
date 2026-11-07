@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps more of the source's content and voice: it retains all the field questions, \"monitor forever,\" and the closing emojis. Its rhythm also varies more. A reverses the meaning of the daughters' school-attendance claim, drops one of the questions, and adds an overhead claim that isn't in the source.",
+  "costUsd": 0.0773312,
+  "valid": true
+}

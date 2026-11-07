@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 3,
+  "winner": "A",
+  "reason": "A reads more naturally and handles the rhetorical questions more gracefully. B flips the meaning of the mother's quote ('never before gone a full week without missing school'), adds filler like 'no wasted pieces', and keeps the awkward 'Experts agree on that point.'",
+  "costUsd": 0.0511074,
+  "valid": true
+}

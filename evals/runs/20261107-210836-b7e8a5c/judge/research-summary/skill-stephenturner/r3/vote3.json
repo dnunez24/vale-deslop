@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 7
+  },
+  "fidelityA": 3,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B keeps more of the source, including the filing-cabinet analogy, the bold list labels and the 18 percent figure credited to earlier studies, and its rhythm is more natural. A presents the 18 percent as its own result and calls the study the \"first direct test,\" two claims the source doesn't make.",
+  "costUsd": 0.049006,
+  "valid": true
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "exec-memo",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 8
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A reads more like a person wrote it: it merges the repetitive budget lines and frames the four questions and the tradeoff cleanly. B stays a bit closer to the source on details like 'integrate every internal tool' and 'the market', but it keeps more of the source's mechanical repetition.",
+  "costUsd": 0.0528912,
+  "valid": true
+}

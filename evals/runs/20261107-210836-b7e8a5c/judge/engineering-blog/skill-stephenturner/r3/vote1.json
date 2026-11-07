@@ -1,0 +1,27 @@
+{
+  "doc": "engineering-blog",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "A",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 9,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 8,
+    "density": 9
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B is tighter and drops filler that A keeps, such as \"The reaction has been strong\" and \"Even so, there were hurdles.\" It also reads more like one specific writer. A holds slightly closer to the source: it keeps the \"let us know\" invitation and the speed-and-predictability framing. B's gain in density outweighs that small fidelity edge.",
+  "costUsd": 0.08392120000000002,
+  "valid": true
+}

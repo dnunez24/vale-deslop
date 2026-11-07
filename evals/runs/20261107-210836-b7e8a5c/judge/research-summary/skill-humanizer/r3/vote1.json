@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 3,
+  "voteIndex": 1,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 6
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B reads more naturally, with more varied sentences and tighter phrasing. A stays slightly closer to the source wording but still sounds stiff in places. Each drops or reshapes a few minor details, such as the \"replication paradox\" label and the appendix question, so they score the same on fidelity.",
+  "costUsd": 0.08477620000000001,
+  "valid": true
+}

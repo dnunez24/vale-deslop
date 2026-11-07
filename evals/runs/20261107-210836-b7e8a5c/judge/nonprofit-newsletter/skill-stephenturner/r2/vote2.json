@@ -1,0 +1,27 @@
+{
+  "doc": "nonprofit-newsletter",
+  "baselineArm": "skill-stephenturner",
+  "repeat": 2,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 8
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "B",
+  "reason": "Both remove the boilerplate well. B is tighter and stays closer to the source: it keeps the questions, the bold list labels and the 'three things' framing. A adds a detail the source doesn't have ('a pump nobody can afford to fix') and loosens a few claims ('weak pump', 'small' model).",
+  "costUsd": 0.0501844,
+  "valid": true
+}

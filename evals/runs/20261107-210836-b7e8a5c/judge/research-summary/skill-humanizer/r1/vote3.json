@@ -1,0 +1,27 @@
+{
+  "doc": "research-summary",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 3,
+  "valeLabel": "B",
+  "a": {
+    "directness": 7,
+    "rhythm": 6,
+    "trust": 7,
+    "authenticity": 6,
+    "density": 7
+  },
+  "b": {
+    "directness": 8,
+    "rhythm": 8,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 5,
+  "fidelityB": 4,
+  "winner": "B",
+  "reason": "B reads more naturally, with more varied sentences and clearer claims, such as \"Timing mattered more than quantity.\" It adds one small invented detail (\"a few dozen people\"), while A keeps closer to the source but sounds stiffer and more mechanical.",
+  "costUsd": 0.0838962,
+  "valid": true
+}

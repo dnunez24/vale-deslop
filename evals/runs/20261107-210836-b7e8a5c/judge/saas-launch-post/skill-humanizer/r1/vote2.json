@@ -1,0 +1,27 @@
+{
+  "doc": "saas-launch-post",
+  "baselineArm": "skill-humanizer",
+  "repeat": 1,
+  "voteIndex": 2,
+  "valeLabel": "B",
+  "a": {
+    "directness": 8,
+    "rhythm": 7,
+    "trust": 8,
+    "authenticity": 7,
+    "density": 7
+  },
+  "b": {
+    "directness": 7,
+    "rhythm": 7,
+    "trust": 7,
+    "authenticity": 7,
+    "density": 7
+  },
+  "fidelityA": 4,
+  "fidelityB": 5,
+  "winner": "A",
+  "reason": "A removes more of the empty hype, such as \"excellence, collaboration, and innovation,\" \"breakthrough,\" and the string of rhetorical questions, and its prose reads more cleanly. B is slightly more faithful because it keeps the original title and \"lock-in,\" but it leaves in more of the filler.",
+  "costUsd": 0.0514454,
+  "valid": true
+}
