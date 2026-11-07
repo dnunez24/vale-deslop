@@ -36,6 +36,8 @@ These verified facts shape the approach:
   See decision 9.
 - Changing any Deslop rule, its level, or its message, in the package or in the plugin config.
 - An eval writer or judge from a provider other than Anthropic.
+- Cheaper judging (direct API calls or decision models such as `typesafe/jev-1.14`) and moving the eval to another harness such as Pi or OpenCode.
+  Both belong to a separate eval-framework change, whose main goal is support for other model providers.
 - Gating the merge or the release on the eval verdict.
 
 ## Decisions
@@ -193,7 +195,14 @@ Git treats ignored files as expendable on checkout, so switching to an older bra
   This replaces the hard-coded summary line in `eval-report.ts`.
 - The plugin run uses the arms `control`, `skill-humanizer`, `skill-stephenturner`, and `plugin-deslop-writing`, with the same repeats (3), judge votes (3), and model aliases as run 1.
   `vale-deslop` is left out: its result stands in run 1, and leaving it out saves about $22.
-  Estimated cost: about $5 for control, $30 for the skill arms, $20 for the plugin arm, and $13 for judging, so $70 is the budget cap.
+  Estimated cost at list price: about $48 to $60 at Sonnet 5.5 and Opus 5.5 prices (run 1 cost $70.96 on Sonnet 5 and Opus 5), so $70 stays the budget cap.
+- Paid runs and preflight authenticate with an API key from the Claude Console organization linked to the Max plan.
+  That usage draws on the plan's $100 monthly API credit, not its usage limits, so a run can't use up the limits needed for normal work, and the budget guard's `costUsd` matches what the credit is charged.
+  The key comes from 1Password for one command only: `ANTHROPIC_API_KEY=op://automation/vale-deslop-anthropic-api-key/credential op run -- <command>`.
+  Never export it in a shell profile, set it in mise `[env]`, or store it in GitHub, because a set `ANTHROPIC_API_KEY` replaces the subscription login for interactive Claude Code too.
+  CI needs no key: the `evals` workflow only runs `eval:verify`.
+- Preflight records the resolved judge model, as it already does for the writer model, and the auth method from `claude auth status` (`api_key` under `op run`).
+  Run 1 recorded only the alias `opus`, so its report can't say which Opus version judged.
 
 ## Risks / Trade-offs
 

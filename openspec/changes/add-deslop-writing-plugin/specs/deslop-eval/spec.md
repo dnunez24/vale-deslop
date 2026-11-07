@@ -59,6 +59,25 @@ Each run SHALL store a copy of the prompts it used, and the report for a run SHA
 - **WHEN** `evals/prompts/shared.md` changes after a run is committed
 - **THEN** the report for the earlier run still shows the task text that run used
 
+### Requirement: Resolved models are recorded
+
+Each run SHALL record the exact model IDs that served the writer and judge calls, not only the aliases it requested, and the report SHALL show those IDs.
+
+#### Scenario: Judge alias resolves
+
+- **GIVEN** a run requests the judge model by the alias `opus`
+- **WHEN** preflight completes
+- **THEN** the manifest and the report name a model ID that starts with `claude-opus-`
+
+### Requirement: Auth method is recorded
+
+Each run SHALL record the Claude CLI auth method it used, so that readers can tell whether its cost figures were charged to API credit.
+
+#### Scenario: API key run
+
+- **WHEN** a run is started with `ANTHROPIC_API_KEY` set for that command only
+- **THEN** the manifest records the auth method `api_key`
+
 ### Requirement: Criteria fixed before the paid run
 
 The plugin run SHALL use the existing C1 to C4 criteria and thresholds unchanged, with the treatment arm in place of `vale-deslop`.
