@@ -36,13 +36,14 @@
 - [ ] 5.1 Add `config.treatmentArm` to results, migrate the run-1 `results.json` to `"vale-deslop"`, and replace the hard-coded `vale-deslop` in `summarize()`, `verdict()`, and the judge loop; verify `bun run scripts/eval-measure.ts --run 20260828-205343-dcc8eb2 --check` passes and `mise run eval:verify` is unchanged for run 1
 - [ ] 5.2 Snapshot `evals/prompts/` into `runs/<id>/prompts/` at run start, and render the shared task text in the report from that snapshot; add the run-1 snapshot from the current prompts, and verify `mise run eval:report` reproduces the committed `REPORT.md`
 - [ ] 5.3 Write the shared prompt v2 (output to `rewrite.md`, source unchanged), measure `rewrite.md`, and add the `source-modified` and `no-output` failure reasons; add `tests/evals.test.ts` cases for both reasons, and verify they fail before the change and pass after it
-- [ ] 5.4 Add the `plugin-deslop-writing` arm (design decision 11): copy the committed skill into the scratch `.claude/skills/`, use skill isolation and `Bash(vale *)` permissions, detect skill activation, and fail on skill-file tampering; verify with a paid dry run on one doc with one repeat (`--arms plugin-deslop-writing --docs exec-memo --repeats 1`, under $2) that the skill activates, Vale runs, and `rewrite.md` is measured
+- [ ] 5.4 Add the `plugin-deslop-writing` arm (design decision 11): copy the committed skill into the scratch `.claude/skills/`, use skill isolation and `Bash(vale *)` permissions, detect skill activation, and fail on skill-file tampering; ask the user for approval before the dry run, because it spends API credit; verify with a paid dry run on one doc with one repeat (`--arms plugin-deslop-writing --docs exec-memo --repeats 1`, under $2) that the skill activates, Vale runs, and `rewrite.md` is measured
 - [ ] 5.5 Update `evals/README.md`: the arm table, the per-run treatment arm, the prompt snapshots, and the run-2 arm set and budget; verify each documented command runs as written with `--help` or a dry run
 
 ## 6. Run the pre-registered plugin eval
 
-- [ ] 6.1 Commit groups 1 to 5, then run `bun run scripts/eval-preflight.ts` from a clean tree; verify that preflight passes and that `git status` is clean
-- [ ] 6.2 Run `mise run eval` with arms `control,skill-humanizer,skill-stephenturner,plugin-deslop-writing`, treatment `plugin-deslop-writing`, and a $70 budget; verify that the manifest records the clean commit from 6.1, with no failed attempts other than the documented failure reasons
+- [ ] 6.1 Commit groups 1 to 5, then run `bun run scripts/eval-preflight.ts` from a clean tree; verify that preflight passes and that `git status` is clean.
+      Run 1 was recorded with a dirty working tree; the clean commit is what proves the criteria, prompts, skill, and config were fixed before the run
+- [ ] 6.2 Ask the user for approval before running, because this spends API credit; then run `mise run eval` with arms `control,skill-humanizer,skill-stephenturner,plugin-deslop-writing`, treatment `plugin-deslop-writing`, and a $70 budget; verify that the manifest records the clean commit from 6.1, with no failed attempts other than the documented failure reasons
 - [ ] 6.3 Run `mise run eval:report` and `mise run eval:verify`, and update the evidence section of `README.md` to describe the advisory run and link the report, whatever the verdict; verify `mise run ci` passes
 
 ## 7. Integration checks
