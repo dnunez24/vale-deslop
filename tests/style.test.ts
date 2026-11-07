@@ -60,7 +60,7 @@ describe("style structure", () => {
 
   it("meta.json parses and pins vale_version", () => {
     const meta = JSON.parse(readFileSync(metaPath, "utf8"));
-    expect(meta.vale_version).toBe(">=3.2.0");
+    expect(meta.vale_version).toBe(">=3.21.0");
   });
 
   it("Deslop/.vale.ini declares StylesPath = styles", () => {

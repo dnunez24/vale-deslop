@@ -113,7 +113,7 @@ It SHALL ignore the user's global Vale config, any project Vale config, and `VAL
 
 ### Requirement: Vale detection and install offer
 
-Before its first Vale run in a task, the skill SHALL check for Vale 3.2.0 or newer on `PATH`.
+Before its first Vale run in a task, the skill SHALL check for Vale 3.21.0 or newer on `PATH`, the same minimum the Deslop package documents.
 If Vale is missing or older, the skill SHALL offer the install command for the user's operating system and SHALL install only after the user approves.
 
 #### Scenario: Vale missing
@@ -123,7 +123,7 @@ If Vale is missing or older, the skill SHALL offer the install command for the u
 
 #### Scenario: Vale too old
 
-- **WHEN** the installed Vale reports a version older than 3.2.0
+- **WHEN** the installed Vale reports a version older than 3.21.0
 - **THEN** the skill treats Vale as missing and offers an upgrade
 
 ### Requirement: Inference-only fallback

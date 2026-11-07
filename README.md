@@ -69,8 +69,9 @@ hedging density, negative parallelism, and 44 more rules.
 
 ## Requirements
 
-Vale 3.2.0 or newer.
+Vale 3.21.0 or newer.
 Four rules run as local Tengo scripts, and script-based rules that reference a local file only load correctly on Vale 3.2.0+.
+Vale 3.20 and earlier also install packages into the wrong folder on a second `vale sync`, so a Deslop update never reaches the linter.
 
 ## Install
 

@@ -1,4 +1,4 @@
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -93,6 +93,26 @@ describe("distributable package", () => {
     >;
     const checks = (results["sample.md"] ?? []).map((a) => a.Check);
     expect(checks).toContain("Deslop.AnaphoraRun");
+  });
+
+  // Vale 3.20 and earlier read the package's own `StylesPath = styles` on a second sync and
+  // installed into `styles/.vale-config/styles/` instead, so package updates never reached the
+  // linter (fixed in Vale 3.21.0, vale-cli/vale@1e4f6ed). Deslop's minimum Vale version rests on it.
+  it("re-syncs updates into the project's StylesPath", () => {
+    const cfgPath = join(consumeDir, ".vale.ini");
+    const rulePath = join(consumeDir, "styles", "Deslop", "AnaphoraRun.yml");
+    rmSync(rulePath);
+
+    const resync = Bun.spawnSync({
+      cmd: ["vale", "--no-global", `--config=${cfgPath}`, "sync"],
+      cwd: consumeDir,
+      stdout: "pipe",
+      stderr: "pipe",
+    });
+    expect(resync.exitCode, resync.stderr.toString("utf8")).toBe(0);
+
+    expect(existsSync(rulePath)).toBe(true);
+    expect(existsSync(join(consumeDir, "styles", ".vale-config", "styles"))).toBe(false);
   });
 });
 

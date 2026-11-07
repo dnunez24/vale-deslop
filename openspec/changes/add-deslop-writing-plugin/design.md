@@ -121,7 +121,7 @@ This follows the existing `readme:update` pattern.
 
 ### 6. Vale install offer
 
-The skill runs `vale --version` and compares the result with 3.2.0.
+The skill runs `vale --version` and compares the result with 3.21.0, the minimum in the package's `meta.json`.
 `references/install-vale.md` lists one command per platform:
 
 - macOS and Linux: Homebrew.
