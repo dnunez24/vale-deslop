@@ -18,3 +18,12 @@ repo
 configs
 [Ee]val
 [Ee]vals
+config
+frontmatter
+stdin
+[Ww]inget
+npm
+worktree
+untracked
+vendored
+validators?
