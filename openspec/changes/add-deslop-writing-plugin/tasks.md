@@ -49,7 +49,7 @@
 
 ## 7. Integration checks
 
-- [ ] 7.1 On a fresh clone of the branch, run `mise install && mise run setup && mise run ci`; verify it passes, `git status` is clean, and the OpenSpec skills exist
+- [x] 7.1 On a fresh clone of the branch, run `mise install && mise run setup && mise run ci`; verify it passes, `git status` is clean, and the OpenSpec skills exist
 - [x] 7.2 Run `openspec validate add-deslop-writing-plugin --strict`; verify it passes
 
 ## Workflow follow-up
