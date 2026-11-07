@@ -9,7 +9,7 @@ build="$(mktemp -d)"
 trap 'rm -rf "$build"' EXIT
 mkdir -p "$out"
 rm -f "$out/Deslop.zip"
-cp -R "$root/Deslop" "$build/Deslop"
+cp -R "$root/plugin/skills/deslop-writing/Deslop" "$build/Deslop"
 cp "$root/LICENSE" "$build/Deslop/LICENSE"
-( cd "$build" && zip -qr "$out/Deslop.zip" Deslop -x "*.DS_Store" )
+(cd "$build" && zip -qr "$out/Deslop.zip" Deslop -x "*.DS_Store")
 echo "$out/Deslop.zip"

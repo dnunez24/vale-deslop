@@ -26,6 +26,7 @@ const ARM_LABELS: Record<string, string> = {
   "skill-humanizer": "skill-humanizer (blader/humanizer)",
   "skill-stephenturner": "skill-stephenturner (stephenturner/skill-deslop)",
   "vale-deslop": "vale-deslop (this package)",
+  "plugin-deslop-writing": "plugin-deslop-writing (this plugin's skill)",
 };
 
 function fmt(n: number | null, digits = 2): string {
@@ -69,7 +70,9 @@ function renderMetadata(results: Results): string {
     `- Git: \`${results.git.sha}\`${results.git.dirty ? " (dirty working tree)" : ""}`,
     `- Vale: ${results.vale.version}, ${results.vale.unionRuns} union runs per measurement`,
     `- Package zip sha256: \`${results.vale.packageZipSha256}\``,
+    `- Treatment arm: \`${results.config.treatmentArm}\``,
     `- Actor model: \`${results.models.actor}\`, judge model: \`${results.models.judge}\``,
+    `- Auth method: ${results.authMethod ? `\`${results.authMethod}\`` : "not recorded"}`,
     ...results.skills.map((s) => `- ${s.armId}: [\`${s.repo}\`](https://github.com/${s.repo}) @ \`${s.sha}\``),
     `- Repeats: ${results.config.repeats}, judge votes: ${results.config.judgeVotes}, budget: $${results.config.budgetUsd}`,
     `- Total spend: $${totalCost.toFixed(2)}`,
@@ -78,22 +81,31 @@ function renderMetadata(results: Results): string {
   return lines.join("\n");
 }
 
-function renderMethod(): string {
+const ARM_INTERVENTIONS: Record<string, string> = {
+  control: "none (bare model)",
+  "skill-humanizer": "[`blader/humanizer`](https://github.com/blader/humanizer), skill `humanizer`",
+  "skill-stephenturner": "[`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop), skill `deslop`",
+  "vale-deslop": "this package's built `Deslop.zip`, plus a `vale` fix loop (max 8 iterations)",
+  "plugin-deslop-writing": "the committed `plugin/skills/deslop-writing` skill, which runs Vale as advice (at most two passes)",
+};
+
+function renderMethod(results: Results): string {
+  const armIds = results.summary.arms.map((s) => s.armId);
+  const sharedPath = `runs/${results.runId}/prompts/shared.md`;
+  const sharedAbs = fileURLToPath(new URL(`../evals/${sharedPath}`, import.meta.url));
+  const sharedText = readFileSync(sharedAbs, "utf8").trim();
   return [
     "## Method",
     "",
-    "Four arms edit the same corpus document with the same shared task text. Only the intervention differs:",
+    `${armIds.length} arms edit the same corpus document with the same shared task text. Only the intervention differs:`,
     "",
     "| Arm | Intervention |",
     "| --- | --- |",
-    "| `control` | none (bare model) |",
-    "| `skill-humanizer` | [`blader/humanizer`](https://github.com/blader/humanizer), skill `humanizer` |",
-    "| `skill-stephenturner` | [`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop), skill `deslop` |",
-    "| `vale-deslop` | this package's built `Deslop.zip`, plus a `vale` fix loop (max 8 iterations) |",
+    ...armIds.map((id) => `| \`${id}\` | ${ARM_INTERVENTIONS[id] ?? id} |`),
     "",
-    "Shared task text (`evals/prompts/shared.md`), identical across every arm:",
+    `Shared task text ([\`${sharedPath}\`](${sharedPath}), the copy this run used), identical across every arm:`,
     "",
-    "> Rewrite deslop.md's prose so it no longer reads as AI-generated, preserving every factual claim, heading, list, table, and code block, within 15% of the original word count.",
+    ...sharedText.split("\n").map((line) => (line === "" ? ">" : `> ${line}`)),
     "",
     "Every document is measured before and after with the same fixed Vale configuration — not the repo's own `.vale.ini`, and not any arm's scratch config:",
     "",
@@ -127,7 +139,7 @@ function renderHeadline(results: Results): string {
     "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ...rows,
     "",
-    "\"Judge win rate vs. counterpart\": for `vale-deslop`, its win rate across every judged pair against both baselines; for each skill arm, its win rate against `vale-deslop` specifically. `control` is never judged (it has no vale-deslop pairing) and shows n/a.",
+    `"Judge win rate vs. counterpart": for \`${results.config.treatmentArm}\`, its win rate across every judged pair against both baselines; for each skill arm, its win rate against \`${results.config.treatmentArm}\` specifically. \`control\` is never judged (it has no ${results.config.treatmentArm} pairing) and shows n/a.`,
     "",
   ].join("\n");
 }
@@ -143,7 +155,7 @@ function renderPerDocument(results: Results): string {
 
     const rows: string[] = [];
     const samples: string[] = [`**Source** (r1): ${truncate(firstNonHeadingParagraph(sourceText), 240)}`];
-    for (const arm of ARMS) {
+    for (const arm of ARMS.filter((a) => results.summary.arms.some((s) => s.armId === a.id))) {
       const runsForArm = results.runs.filter((r: RunRecord) => r.doc === doc.slug && r.arm === arm.id);
       const r1 = runsForArm.find((r) => r.repeat === 1);
       const eligible = runsForArm.filter(isEligible);
@@ -187,7 +199,7 @@ function renderValidity(results: Results): string {
 }
 
 function renderVerdict(results: Results): string {
-  const { criteria, hypothesisHeld } = verdict(results.summary);
+  const { criteria, hypothesisHeld } = verdict(results.summary, results.config.treatmentArm);
   const lines = ["## Verdict", ""];
   for (const [id, criterion] of Object.entries(criteria)) {
     lines.push(`- **${id}** — ${criterion.pass ? "PASS" : "FAIL"}: ${criterion.detail}`);
@@ -200,10 +212,10 @@ function renderReport(results: Results): string {
   return [
     "# Deslop eval report",
     "",
-    "Vale Deslop vs. agent deslop skills, on a pre-registered corpus with a pre-registered verdict. See `evals/README.md` for how to reproduce this report.",
+    `Treatment arm \`${results.config.treatmentArm}\` vs. agent deslop skills, on a pre-registered corpus with a pre-registered verdict. See \`evals/README.md\` for how to reproduce this report.`,
     "",
     renderMetadata(results),
-    renderMethod(),
+    renderMethod(results),
     renderHeadline(results),
     renderPerDocument(results),
     renderValidity(results),

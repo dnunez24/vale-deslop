@@ -32,7 +32,8 @@
     "repeats": 3,
     "judgeVotes": 3,
     "maxIterations": 8,
-    "budgetUsd": 25
+    "budgetUsd": 25,
+    "treatmentArm": "vale-deslop"
   },
   "preflight": {
     "permissionMode": "bypassPermissions",

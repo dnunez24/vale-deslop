@@ -32,7 +32,7 @@ function round2(n: number): number {
 
 export type Arm = {
   id: string;
-  kind: "control" | "skill" | "vale";
+  kind: "control" | "skill" | "vale" | "plugin";
   skillName?: string;
   vendorDir?: string;
 };
@@ -42,12 +42,28 @@ export const ARMS: Arm[] = [
   { id: "skill-humanizer", kind: "skill", skillName: "humanizer", vendorDir: "humanizer" },
   { id: "skill-stephenturner", kind: "skill", skillName: "deslop", vendorDir: "stephenturner" },
   { id: "vale-deslop", kind: "vale" },
+  { id: "plugin-deslop-writing", kind: "plugin", skillName: "deslop-writing" },
 ];
 
-// The two skill arms are the baselines the pre-registered criteria (C1, C3, C4) compare
-// `vale-deslop` against. `control` is the floor, not a baseline: it exists to show what the base
-// model does unaided, not to be beaten.
+// The two skill arms are the baselines the pre-registered criteria (C1, C3, C4) compare the run's
+// treatment arm (`results.config.treatmentArm`) against. `control` is the floor, not a baseline: it
+// exists to show what the base model does unaided, not to be beaten.
 export const BASELINE_ARM_IDS = ["skill-humanizer", "skill-stephenturner"] as const;
+
+export type InvalidReason = "no-output" | "source-modified" | "no-edit" | "suppression";
+
+// Classifies one finished attempt's files before it is scored. `sourceText` is the corpus text the
+// attempt started from; `currentSourceText` is `deslop.md` after the attempt (null if deleted);
+// `outputText` is `rewrite.md` (null if it was never written). Modifying the source is checked
+// first because it breaks the task's hard constraint no matter what the output holds.
+export function classifyOutput(files: { sourceText: string; currentSourceText: string | null; outputText: string | null }): InvalidReason | null {
+  const { sourceText, currentSourceText, outputText } = files;
+  if (currentSourceText !== sourceText) return "source-modified";
+  if (outputText === null || outputText.trim().length === 0) return "no-output";
+  if (outputText === sourceText) return "no-edit";
+  if (SUPPRESSION_PATTERN.test(outputText)) return "suppression";
+  return null;
+}
 
 // ---------------------------------------------------------------------------
 // Word count
@@ -84,7 +100,7 @@ export type Measurement = {
 // a committed artifact after the fact is caught too).
 export const SUPPRESSION_PATTERN = /<!--\s*vale|vale\s+(off|on)|vale-ignore/i;
 
-const STYLES_PLACEHOLDER = "<repo>/Deslop/styles";
+const STYLES_PLACEHOLDER = "<repo>/plugin/skills/deslop-writing/Deslop/styles";
 
 // The fixed yardstick every arm (and the corpus itself) is measured against. Deliberately not the
 // repo's own `.vale.ini` (which disables nine document-shape rules and adds Microsoft) and not any
@@ -193,7 +209,7 @@ export type JudgeVote = {
   baselineArm: string;
   repeat: number;
   voteIndex: number;
-  /** Which blinded label ("A" or "B") the vale-deslop output was assigned for this vote. */
+  /** Which blinded label ("A" or "B") the treatment arm's output was assigned for this vote. */
   valeLabel: "A" | "B";
   a: RubricScores;
   b: RubricScores;
@@ -218,8 +234,10 @@ export type Results = {
   git: { sha: string; dirty: boolean };
   vale: { version: string; unionRuns: number; packageZipSha256: string };
   models: { actor: string; judge: string };
+  /** The `claude` CLI auth method the run used (`authMethod` from `claude auth status`). Absent on runs that predate the record. */
+  authMethod?: string;
   skills: Array<{ armId: string; repo: string; sha: string; skillSha256: string }>;
-  config: { repeats: number; judgeVotes: number; maxIterations: number; budgetUsd: number };
+  config: { repeats: number; judgeVotes: number; maxIterations: number; budgetUsd: number; treatmentArm: string };
   preflight: Preflight;
   docs: DocMetrics[];
   runs: RunRecord[];
@@ -345,7 +363,10 @@ function aggregateJudgeVotes(votes: JudgeVote[]): JudgeAggregate[] {
 }
 
 export function summarize(results: Results): Summary {
-  const arms: ArmSummary[] = ARMS.map((arm) => {
+  // Only arms the run actually executed: a run that leaves an arm out (run 2 drops vale-deslop)
+  // must not show an empty row for it.
+  const armsRun = ARMS.filter((arm) => results.runs.some((r) => r.arm === arm.id));
+  const arms: ArmSummary[] = armsRun.map((arm) => {
     const armRuns = results.runs.filter((r) => r.arm === arm.id);
     const okRuns = armRuns.filter((r) => r.status === "ok");
     const eligible = okRuns.filter((r) => isEligible(r));
@@ -357,7 +378,7 @@ export function summarize(results: Results): Summary {
     let judgeWinRate: number | null = null;
     let meanRubric: number | null = null;
     let meanFidelity: number | null = null;
-    if (arm.id === "vale-deslop") {
+    if (arm.id === results.config.treatmentArm) {
       const relevant = aggregates;
       if (relevant.length > 0) {
         const wins = relevant.filter((a) => a.winner === "vale").length + 0.5 * relevant.filter((a) => a.winner === "tie").length;
@@ -399,7 +420,7 @@ export function summarize(results: Results): Summary {
   const docSlugs = [...new Set(results.runs.map((r) => r.doc))];
   const perDocArm: PerDocArmStat[] = [];
   for (const doc of docSlugs) {
-    for (const arm of ARMS) {
+    for (const arm of armsRun) {
       const eligible = results.runs.filter((r) => r.doc === doc && r.arm === arm.id && isEligible(r));
       perDocArm.push({ doc, arm: arm.id, meanAlertsPer1k: mean(eligible.map((r) => r.alertsPer1k)), n: eligible.length });
     }
@@ -432,14 +453,14 @@ export function summarize(results: Results): Summary {
 
 export type VerdictCriterion = { pass: boolean; detail: string };
 
-export function verdict(summary: Summary): { criteria: Record<string, VerdictCriterion>; hypothesisHeld: boolean } {
+export function verdict(summary: Summary, treatmentArm: string): { criteria: Record<string, VerdictCriterion>; hypothesisHeld: boolean } {
   const docSlugs = [...new Set(summary.perDocArm.map((p) => p.doc))];
 
-  // C1: vale-deslop's per-doc mean alertsPer1k lower than each baseline's on >=5 of 6 documents.
+  // C1: the treatment arm's per-doc mean alertsPer1k lower than each baseline's on >=5 of 6 documents.
   const c1PerBaseline = BASELINE_ARM_IDS.map((baseline) => {
     let wins = 0;
     for (const doc of docSlugs) {
-      const valeStat = summary.perDocArm.find((p) => p.doc === doc && p.arm === "vale-deslop");
+      const valeStat = summary.perDocArm.find((p) => p.doc === doc && p.arm === treatmentArm);
       const baseStat = summary.perDocArm.find((p) => p.doc === doc && p.arm === baseline);
       if (valeStat && baseStat && valeStat.n > 0 && baseStat.n > 0 && valeStat.meanAlertsPer1k < baseStat.meanAlertsPer1k) {
         wins++;
@@ -450,12 +471,12 @@ export function verdict(summary: Summary): { criteria: Record<string, VerdictCri
   const c1Pass = c1PerBaseline.every((b) => b.wins >= 5);
   const c1Detail = c1PerBaseline.map((b) => `${b.baseline}: ${b.wins}/${b.total} docs`).join("; ");
 
-  // C2: vale-deslop mean retention >= 0.85.
-  const valeSummary = summary.arms.find((a) => a.armId === "vale-deslop");
+  // C2: the treatment arm's mean retention >= 0.85.
+  const valeSummary = summary.arms.find((a) => a.armId === treatmentArm);
   const c2Pass = (valeSummary?.meanRetention ?? 0) >= 0.85;
-  const c2Detail = `vale-deslop mean retention = ${valeSummary?.meanRetention ?? "n/a"}`;
+  const c2Detail = `${treatmentArm} mean retention = ${valeSummary?.meanRetention ?? "n/a"}`;
 
-  // C3: vale-deslop mean judge fidelity >= (each baseline's mean fidelity - 0.5).
+  // C3: the treatment arm's mean judge fidelity >= (each baseline's mean fidelity - 0.5).
   const c3PerBaseline = summary.judgePairs.map((p) => ({
     baseline: p.baselineArm,
     pass: p.aggregates > 0 && p.valeMeanFidelity >= p.baselineMeanFidelity - 0.5,
@@ -463,9 +484,9 @@ export function verdict(summary: Summary): { criteria: Record<string, VerdictCri
     baselineFidelity: p.baselineMeanFidelity,
   }));
   const c3Pass = c3PerBaseline.length > 0 && c3PerBaseline.every((b) => b.pass);
-  const c3Detail = c3PerBaseline.map((b) => `${b.baseline}: vale ${b.valeFidelity} vs ${b.baselineFidelity} - 0.5`).join("; ");
+  const c3Detail = c3PerBaseline.map((b) => `${b.baseline}: ${treatmentArm} ${b.valeFidelity} vs ${b.baselineFidelity} - 0.5`).join("; ");
 
-  // C4: vale-deslop judge win rate >= 0.5 against each baseline on that baseline's own rubric.
+  // C4: the treatment arm's judge win rate >= 0.5 against each baseline on that baseline's own rubric.
   const c4PerBaseline = summary.judgePairs.map((p) => ({ baseline: p.baselineArm, pass: p.aggregates > 0 && p.valeWinRate >= 0.5, winRate: p.valeWinRate }));
   const c4Pass = c4PerBaseline.length > 0 && c4PerBaseline.every((b) => b.pass);
   const c4Detail = c4PerBaseline.map((b) => `${b.baseline}: win rate ${b.winRate}`).join("; ");

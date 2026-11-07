@@ -22,7 +22,7 @@ mise install
 mise run setup
 ```
 
-`setup` runs `deps` (Bun packages), `hooks` (installs lefthook), and `sync` (downloads the Vale styles this repo self-lints with).
+`setup` runs `deps` (Bun packages), `hooks` (installs lefthook), `sync` (downloads the Vale styles this repo self-lints with), and `openspec:init` (regenerates the git-ignored OpenSpec agent skills).
 Run `mise tasks ls` any time to see every entry point.
 
 After `mise run hooks`, switching branches refreshes pinned tools and Bun packages automatically via the `post-checkout` hook.
@@ -30,9 +30,10 @@ You shouldn't need to re-run `mise install` by hand after a `git checkout`.
 
 ## Repository layout
 
-- `Deslop/`: the package that ships.
+- `plugin/skills/deslop-writing/Deslop/`: the package that ships.
   The build script zips everything under it verbatim into `Deslop.zip`.
-- `tests/fixtures/rules/<Rule>.md`: the positive fixture for `Deslop/styles/Deslop/<Rule>.yml`,
+  The same directory is the rule source the `deslop-writing` skill runs, so there's one copy of the rules.
+- `tests/fixtures/rules/<Rule>.md`: the positive fixture for `plugin/skills/deslop-writing/Deslop/styles/Deslop/<Rule>.yml`,
   one file per rule, each containing sentences the rule must fire on.
 - `tests/fixtures/clean/`: a nine-genre corpus of clean prose that must not trip false positives
   (aside from the documented fiction em-dash allowance).
@@ -40,10 +41,14 @@ You shouldn't need to re-run `mise install` by hand after a `git checkout`.
   It's slop-filled test input, not house-authored prose, so never reformat it to satisfy the linters.
 - `evals/`: the reproducible eval comparing this package against third-party deslop skills.
   See `evals/README.md` for how to reproduce the report and what each committed artifact means.
+- `plugin/`: the Claude Code and Agent Plugins package, with the `deslop-writing` skill in `plugin/skills/deslop-writing/`.
+  The skill reads only files inside its own directory: `SKILL.md`, `deslop.vale.ini`, `references/`, and `Deslop/`, because installers copy that directory alone.
+  `references/checks.md` is generated, so run `mise run checks:update` after a rule's level or message changes.
+  Release-please bumps the version in `plugin/plugin.json`, `plugin/.claude-plugin/plugin.json`, and `.claude-plugin/marketplace.json` together with `package.json`.
 
 ## Changing or adding a rule
 
-1. Edit or add the rule's `.yml` under `Deslop/styles/Deslop/`.
+1. Edit or add the rule's `.yml` under `plugin/skills/deslop-writing/Deslop/styles/Deslop/`.
 2. Add or update `tests/fixtures/rules/<Rule>.md` so the rule fires at least three times.
 3. Run `mise run expected:update` to regenerate `tests/expected-alerts.json`.
 4. Review the diff by hand.
@@ -92,7 +97,7 @@ Set these once in the GitHub UI, under Settings:
   It trusts that whatever reached `main` already passed CI on its pull request, and this setting is what makes that trust hold.
   Without it, a direct push to `main` could ship a broken archive.
   Don't add the `evals` workflow to this list.
-  It's path-filtered: on a pull request that touches none of `Deslop/**`, `evals/**`, `scripts/eval-*.ts`, or `tests/evals.test.ts`, GitHub would report a required check as forever pending.
+  It's path-filtered: on a pull request that touches none of `plugin/skills/deslop-writing/Deslop/**`, `evals/**`, `scripts/eval-*.ts`, or `tests/evals.test.ts`, GitHub would report a required check as forever pending.
   That blocks the merge.
 
 ### One-time registry submission

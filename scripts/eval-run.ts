@@ -1,13 +1,15 @@
 #!/usr/bin/env bun
-// Runs the four-arm eval: every corpus document, edited by every arm, `--repeats` times each, then
-// (unless `--no-judge`) blind-judges vale-deslop against each skill baseline. Spends real API
+// Runs the arm comparison: every corpus document, edited by every selected arm, `--repeats` times
+// each, then (unless `--no-judge`) blind-judges the treatment arm against each skill baseline. Every
+// arm writes its rewrite to `rewrite.md` and must leave `deslop.md` unchanged. Spends real API
 // credit. Reads `evals/runs/.preflight.json` (written by `eval-preflight.ts`) for the flag set that
 // actually works on this CLI/account instead of re-deciding it here.
 //
-//   bun run scripts/eval-run.ts [--docs a,b] [--arms a,b] [--repeats 3] [--judge-votes 3]
-//                               [--no-judge] [--budget 25] [--actor-model sonnet]
+//   bun run scripts/eval-run.ts [--docs a,b] [--arms a,b] [--treatment <arm>] [--repeats 3]
+//                               [--judge-votes 3] [--no-judge] [--budget 25] [--actor-model sonnet]
 //                               [--judge-model opus] [--run-id <id>] [--keep-scratch]
-import { copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
+import { createHash } from "node:crypto";
+import { type Dirent, copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
@@ -19,7 +21,7 @@ import {
   type Results,
   type RubricScores,
   type RunRecord,
-  SUPPRESSION_PATTERN,
+  classifyOutput,
   deltaMetrics,
   findTranscript,
   measure,
@@ -34,6 +36,7 @@ const evalsRoot = join(repoRoot, "evals");
 const corpusRoot = join(evalsRoot, "corpus");
 const skillsRoot = join(evalsRoot, "skills");
 const promptsRoot = join(evalsRoot, "prompts");
+const pluginSkillDir = join(repoRoot, "plugin", "skills", "deslop-writing");
 const scratchRoot = join(evalsRoot, ".scratch");
 const preflightCachePath = join(runsRoot, ".preflight.json");
 
@@ -49,6 +52,7 @@ const JUDGE_CALL_BUDGET_USD = 0.5;
 type CliArgs = {
   docs: string[] | null;
   arms: string[] | null;
+  treatment: string;
   repeats: number;
   judgeVotes: number;
   noJudge: boolean;
@@ -63,6 +67,7 @@ function parseArgs(argv: string[]): CliArgs {
   const args: CliArgs = {
     docs: null,
     arms: null,
+    treatment: "plugin-deslop-writing",
     repeats: 3,
     judgeVotes: 3,
     noJudge: false,
@@ -76,6 +81,7 @@ function parseArgs(argv: string[]): CliArgs {
     const arg = argv[i];
     if (arg === "--docs") args.docs = (argv[++i] ?? "").split(",").filter(Boolean);
     else if (arg === "--arms") args.arms = (argv[++i] ?? "").split(",").filter(Boolean);
+    else if (arg === "--treatment") args.treatment = argv[++i] ?? args.treatment;
     else if (arg === "--repeats") args.repeats = Number(argv[++i]);
     else if (arg === "--judge-votes") args.judgeVotes = Number(argv[++i]);
     else if (arg === "--no-judge") args.noJudge = true;
@@ -84,6 +90,25 @@ function parseArgs(argv: string[]): CliArgs {
     else if (arg === "--judge-model") args.judgeModel = argv[++i] ?? args.judgeModel;
     else if (arg === "--run-id") args.runId = argv[++i] ?? null;
     else if (arg === "--keep-scratch") args.keepScratch = true;
+    else if (arg === "--help") {
+      console.log(
+        [
+          "bun run scripts/eval-run.ts [options]  (spends real API credit)",
+          "  --docs a,b            corpus documents to run (default: all)",
+          "  --arms a,b            arms to run (default: control, both skill baselines, and the treatment)",
+          "  --treatment <arm>     arm the verdict and judge pairings evaluate (default: plugin-deslop-writing)",
+          "  --repeats N           attempts per document and arm (default: 3)",
+          "  --judge-votes N       judge votes per pairing (default: 3)",
+          "  --no-judge            skip the blind judging",
+          "  --budget USD          stop before spend could pass this (default: 25)",
+          "  --actor-model ALIAS   writer model alias (default: sonnet)",
+          "  --judge-model ALIAS   judge model alias (default: opus)",
+          "  --run-id ID           resume an existing run",
+          "  --keep-scratch        keep each attempt's scratch directory",
+        ].join("\n"),
+      );
+      process.exit(0);
+    }
     else throw new Error(`unknown argument: ${arg}`);
   }
   return args;
@@ -172,6 +197,8 @@ function invokeClaude(cwd: string, promptText: string, flags: string[]): ClaudeC
 
 type PreflightRecord = {
   resolvedActorModel: string;
+  resolvedJudgeModel: string;
+  authMethod: string;
   judgeModel: string;
   preflight: Preflight;
 };
@@ -180,12 +207,17 @@ function loadPreflight(): PreflightRecord {
   if (!existsSync(preflightCachePath)) {
     throw new Error(`missing ${preflightCachePath}: run \`bun run scripts/eval-preflight.ts\` first`);
   }
-  const raw = JSON.parse(readFileSync(preflightCachePath, "utf8")) as {
-    resolvedActorModel: string;
-    judgeModel: string;
-    preflight: Preflight;
+  const raw = JSON.parse(readFileSync(preflightCachePath, "utf8")) as Partial<PreflightRecord>;
+  if (!raw.resolvedActorModel || !raw.resolvedJudgeModel || !raw.authMethod || !raw.judgeModel || !raw.preflight) {
+    throw new Error(`${preflightCachePath} is missing resolved models or the auth method: re-run \`bun run scripts/eval-preflight.ts\``);
+  }
+  return {
+    resolvedActorModel: raw.resolvedActorModel,
+    resolvedJudgeModel: raw.resolvedJudgeModel,
+    authMethod: raw.authMethod,
+    judgeModel: raw.judgeModel,
+    preflight: raw.preflight,
   };
-  return { resolvedActorModel: raw.resolvedActorModel, judgeModel: raw.judgeModel, preflight: raw.preflight };
 }
 
 /** The base `--permission-mode` plus tool flags, given P3's resolved mechanism and the arm kind. */
@@ -194,12 +226,12 @@ function permissionFlags(preflight: Preflight, arm: Arm): string[] {
   const denyBash = mode === "bypassPermissions" ? ["--disallowedTools", "Bash"] : ["--allowedTools", "Read,Edit,Write"];
   const allowValeOnly = mode === "bypassPermissions" ? ["--allowedTools", "Bash(vale *)"] : ["--allowedTools", "Read,Edit,Write,Bash(vale *)"];
   const base = ["--permission-mode", mode];
-  if (arm.kind === "vale") return [...base, ...allowValeOnly];
+  if (arm.kind === "vale" || arm.kind === "plugin") return [...base, ...allowValeOnly];
   return [...base, ...denyBash];
 }
 
 function armFlags(preflight: Preflight, arm: Arm): string[] {
-  const isolation = arm.kind === "skill" ? ["--setting-sources", "project"] : ["--safe-mode"];
+  const isolation = arm.kind === "skill" || arm.kind === "plugin" ? ["--setting-sources", "project"] : ["--safe-mode"];
   return [...isolation, ...permissionFlags(preflight, arm)];
 }
 
@@ -220,7 +252,19 @@ function promptFor(arm: Arm): string {
 // Scratch setup
 // ---------------------------------------------------------------------------
 
-function setupScratch(dir: string, doc: string, arm: Arm, packageZipPath: string): { valeIniSha256: string | null } {
+// Content hash of a directory tree: sorted relative paths plus file bytes. Pins the plugin arm's
+// scratch copy of the skill to the committed skill, so any edit during an attempt is detectable.
+function hashTree(dir: string): string {
+  const files = (readdirSync(dir, { recursive: true, withFileTypes: true }) as Dirent[])
+    .filter((entry) => entry.isFile())
+    .map((entry) => join(entry.parentPath, entry.name).slice(dir.length + 1))
+    .sort();
+  const hash = createHash("sha256");
+  for (const rel of files) hash.update(`${rel}\u0000`).update(readFileSync(join(dir, rel))).update("\u0000");
+  return hash.digest("hex");
+}
+
+function setupScratch(dir: string, doc: string, arm: Arm, packageZipPath: string): { valeIniSha256: string | null; skillTreeSha256: string | null } {
   mkdirSync(dir, { recursive: true });
   copyFileSync(join(corpusRoot, `${doc}.md`), join(dir, "deslop.md"));
 
@@ -230,19 +274,25 @@ function setupScratch(dir: string, doc: string, arm: Arm, packageZipPath: string
     cpSync(join(skillsRoot, arm.vendorDir!), skillDir, { recursive: true, filter: (src) => !src.endsWith("SOURCE.json") });
   }
 
+  if (arm.kind === "plugin") {
+    const skillDir = join(dir, ".claude", "skills", arm.skillName!);
+    mkdirSync(skillDir, { recursive: true });
+    cpSync(pluginSkillDir, skillDir, { recursive: true });
+    return { valeIniSha256: null, skillTreeSha256: hashTree(skillDir) };
+  }
+
   if (arm.kind === "vale") {
     const iniText = `StylesPath = styles\nMinAlertLevel = suggestion\nPackages = ${packageZipPath}\n\n[*.md]\nBasedOnStyles = Deslop\n`;
     writeFileSync(join(dir, ".vale.ini"), iniText);
     const sync = sh(["vale", "--no-global", "--config=.vale.ini", "sync"], dir);
     if (sync.exitCode !== 0) throw new Error(`vale sync failed in ${dir}: ${sync.stderr}`);
-    return { valeIniSha256: sha256Hex(iniText) };
+    return { valeIniSha256: sha256Hex(iniText), skillTreeSha256: null };
   }
 
-  return { valeIniSha256: null };
+  return { valeIniSha256: null, skillTreeSha256: null };
 }
 
-
-const ALLOWED_VALE_SCRATCH_ENTRIES: Record<string, true> = { "deslop.md": true, ".vale.ini": true, styles: true, ".claude": true, ".vale": true };
+const ALLOWED_VALE_SCRATCH_ENTRIES: Record<string, true> = { "deslop.md": true, "rewrite.md": true, ".vale.ini": true, styles: true, ".claude": true, ".vale": true };
 
 function scratchTamperedForValeArm(dir: string): boolean {
   for (const entry of readdirSync(dir)) {
@@ -270,27 +320,34 @@ type AttemptOutcome = {
 async function runOneAttempt(doc: string, arm: Arm, sourceText: string, preflight: PreflightRecord, packageZipPath: string, keepScratch: boolean): Promise<AttemptOutcome> {
   const dir = mkdtempSync(join(scratchRoot, `${doc}-${arm.id}-`));
   try {
-    const { valeIniSha256 } = setupScratch(dir, doc, arm, packageZipPath);
+    const { valeIniSha256, skillTreeSha256 } = setupScratch(dir, doc, arm, packageZipPath);
     const outcome = invokeClaude(dir, promptFor(arm), armFlags(preflight.preflight, arm));
 
-    const outputPath = join(dir, "deslop.md");
+    const sourcePath = join(dir, "deslop.md");
+    const outputPath = join(dir, "rewrite.md");
+    const currentSourceText = existsSync(sourcePath) ? readFileSync(sourcePath, "utf8") : null;
     const outputText = existsSync(outputPath) ? readFileSync(outputPath, "utf8") : null;
 
-    if (!outcome.ok) {
-      return { status: "failed", invalidReason: "cli-error", flags: [], outputText: null, skillActivated: null, valeInvocations: null, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
-    }
-    if (outputText === null || outputText.trim().length === 0 || outputText === sourceText) {
-      return { status: "failed", invalidReason: "no-edit", flags: [], outputText: null, skillActivated: null, valeInvocations: null, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
-    }
-    if (SUPPRESSION_PATTERN.test(outputText)) {
-      return { status: "failed", invalidReason: "suppression", flags: [], outputText: null, skillActivated: null, valeInvocations: null, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
-    }
+    const fail = (invalidReason: string, skillActivated: boolean | null = null, valeInvocations: number | null = null): AttemptOutcome => ({
+      status: "failed",
+      invalidReason,
+      flags: [],
+      outputText: null,
+      skillActivated,
+      valeInvocations,
+      costUsd: outcome.costUsd,
+      durationMs: outcome.durationMs,
+      numTurns: outcome.numTurns,
+    });
+
+    if (!outcome.ok) return fail("cli-error");
+    const invalidReason = classifyOutput({ sourceText, currentSourceText, outputText });
+    if (invalidReason) return fail(invalidReason);
     if (arm.kind === "vale") {
       const currentIniSha = sha256Hex(readFileSync(join(dir, ".vale.ini")));
-      if (currentIniSha !== valeIniSha256 || scratchTamperedForValeArm(dir)) {
-        return { status: "failed", invalidReason: "config-tampering", flags: [], outputText: null, skillActivated: null, valeInvocations: null, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
-      }
+      if (currentIniSha !== valeIniSha256 || scratchTamperedForValeArm(dir)) return fail("config-tampering");
     }
+    if (arm.kind === "plugin" && hashTree(join(dir, ".claude", "skills", arm.skillName!)) !== skillTreeSha256) return fail("config-tampering");
 
     let skillActivated: boolean | null = null;
     let valeInvocations: number | null = null;
@@ -298,13 +355,11 @@ async function runOneAttempt(doc: string, arm: Arm, sourceText: string, prefligh
       const transcriptPath = await findTranscript(outcome.sessionId);
       if (transcriptPath) {
         const transcript = readFileSync(transcriptPath, "utf8");
-        if (arm.kind === "skill") skillActivated = detectSkillActivation(transcript, arm.skillName!);
-        if (arm.kind === "vale") valeInvocations = countValeInvocations(transcript);
+        if (arm.kind === "skill" || arm.kind === "plugin") skillActivated = detectSkillActivation(transcript, arm.skillName!);
+        if (arm.kind === "vale" || arm.kind === "plugin") valeInvocations = countValeInvocations(transcript);
       }
     }
-    if (arm.kind === "skill" && skillActivated === false) {
-      return { status: "failed", invalidReason: "skill-not-activated", flags: [], outputText: null, skillActivated, valeInvocations, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
-    }
+    if ((arm.kind === "skill" || arm.kind === "plugin") && skillActivated === false) return fail("skill-not-activated", skillActivated, valeInvocations);
 
     return { status: "ok", invalidReason: null, flags: [], outputText, skillActivated, valeInvocations, costUsd: outcome.costUsd, durationMs: outcome.durationMs, numTurns: outcome.numTurns };
   } finally {
@@ -490,11 +545,13 @@ async function main(): Promise<void> {
     .map((f) => f.replace(/\.md$/, ""))
     .sort();
   const docs = args.docs ?? allDocs;
-  const arms = (args.arms ?? ARMS.map((a) => a.id)).map((id) => {
+  const armIds = args.arms ?? ["control", ...BASELINE_ARM_IDS, args.treatment];
+  const arms = armIds.map((id) => {
     const arm = ARMS.find((a) => a.id === id);
     if (!arm) throw new Error(`unknown arm: ${id}`);
     return arm;
   });
+  if (!arms.some((a) => a.id === args.treatment)) throw new Error(`treatment arm ${args.treatment} is not in --arms ${armIds.join(",")}`);
 
   const runId = args.runId ?? `${utcRunTimestamp()}-${gitShortSha()}`;
   const runDir = join(runsRoot, runId);
@@ -509,8 +566,19 @@ async function main(): Promise<void> {
     if (!existsSync(packageZipPath)) {
       throw new Error(`resuming run ${runId} but ${packageZipPath} is missing; cannot verify the Vale arm's package identity across the resume`);
     }
+    if (results.config.treatmentArm !== args.treatment) {
+      throw new Error(`run ${runId} recorded treatment ${results.config.treatmentArm}; refusing to resume it with --treatment ${args.treatment}`);
+    }
+    for (const file of readdirSync(promptsRoot)) {
+      const snapshot = join(runDir, "prompts", file);
+      if (!existsSync(snapshot) || readFileSync(snapshot, "utf8") !== readFileSync(join(promptsRoot, file), "utf8")) {
+        throw new Error(`evals/prompts/${file} differs from run ${runId}'s prompt snapshot; refusing to resume with changed prompts`);
+      }
+    }
     console.log(`resuming run ${runId} (${results.runs.length} runs already recorded)`);
   } else {
+    // Each run keeps the prompts it used, so a later prompt edit can't change what its report quotes.
+    cpSync(promptsRoot, join(runDir, "prompts"), { recursive: true });
     // Build the shipped artifact once per run, into a location that survives the process exiting so
     // `--run-id` resume can reuse the exact same zip the Vale arm's scratch `.vale.ini` points at.
     mkdirSync(packageDir, { recursive: true });
@@ -524,15 +592,19 @@ async function main(): Promise<void> {
       const skillSha256 = sha256Hex(Object.values(source.files).sort().join(""));
       return { armId, repo: source.repo, sha: source.sha, skillSha256 };
     });
+    if (arms.some((a) => a.kind === "plugin")) {
+      skillsMeta.push({ armId: "plugin-deslop-writing", repo: "dnunez24/vale-deslop", sha: gitShortSha(), skillSha256: hashTree(pluginSkillDir) });
+    }
 
     results = {
       runId,
       createdAt: new Date().toISOString(),
       git: { sha: gitShortSha(), dirty: gitDirty() },
       vale: { version: sh(["vale", "--version"]).stdout.trim(), unionRuns: 20, packageZipSha256 },
-      models: { actor: preflight.resolvedActorModel, judge: preflight.judgeModel },
+      models: { actor: preflight.resolvedActorModel, judge: preflight.resolvedJudgeModel },
+      authMethod: preflight.authMethod,
       skills: skillsMeta,
-      config: { repeats: args.repeats, judgeVotes: args.judgeVotes, maxIterations: MAX_ITERATIONS_NOTE, budgetUsd: args.budget },
+      config: { repeats: args.repeats, judgeVotes: args.judgeVotes, maxIterations: MAX_ITERATIONS_NOTE, budgetUsd: args.budget, treatmentArm: args.treatment },
       preflight: preflight.preflight,
       docs: [],
       runs: [],
@@ -556,7 +628,7 @@ async function main(): Promise<void> {
     writeFileSync(join(runDir, "results.json"), `${JSON.stringify(results, null, 2)}\n`);
     writeFileSync(
       join(runDir, "manifest.json"),
-      `${JSON.stringify({ runId: results.runId, createdAt: results.createdAt, git: results.git, vale: results.vale, models: results.models, skills: results.skills, config: results.config, preflight: results.preflight }, null, 2)}\n`,
+      `${JSON.stringify({ runId: results.runId, createdAt: results.createdAt, git: results.git, vale: results.vale, models: results.models, authMethod: results.authMethod, skills: results.skills, config: results.config, preflight: results.preflight }, null, 2)}\n`,
     );
   }
 
@@ -662,9 +734,9 @@ async function main(): Promise<void> {
     for (const doc of docs) {
       const sourceText = readFileSync(join(corpusRoot, `${doc}.md`), "utf8");
       for (const baselineArm of BASELINE_ARM_IDS) {
-        if (!arms.some((a) => a.id === baselineArm) || !arms.some((a) => a.id === "vale-deslop")) continue;
+        if (!arms.some((a) => a.id === baselineArm)) continue;
         for (let repeat = 1; repeat <= args.repeats; repeat++) {
-          const valeRun = alreadyRan(doc, "vale-deslop", repeat);
+          const valeRun = alreadyRan(doc, args.treatment, repeat);
           const baselineRun = alreadyRan(doc, baselineArm, repeat);
           if (!valeRun || valeRun.status !== "ok" || !baselineRun || baselineRun.status !== "ok") {
             console.log(`skipping judge ${doc}/${baselineArm}/r${repeat}: a required run is missing or failed`);

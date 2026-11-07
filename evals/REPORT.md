@@ -1,6 +1,6 @@
 # Deslop eval report
 
-Vale Deslop vs. agent deslop skills, on a pre-registered corpus with a pre-registered verdict. See `evals/README.md` for how to reproduce this report.
+Treatment arm `vale-deslop` vs. agent deslop skills, on a pre-registered corpus with a pre-registered verdict. See `evals/README.md` for how to reproduce this report.
 
 ## Run metadata
 
@@ -9,7 +9,9 @@ Vale Deslop vs. agent deslop skills, on a pre-registered corpus with a pre-regis
 - Git: `dcc8eb2` (dirty working tree)
 - Vale: vale version 3.19.0, 20 union runs per measurement
 - Package zip sha256: `89a55325690581e2bb94be756b79fcc545451d4b9fcef8222ab18ec561da2126`
+- Treatment arm: `vale-deslop`
 - Actor model: `claude-sonnet-5`, judge model: `opus`
+- Auth method: not recorded
 - skill-humanizer: [`blader/humanizer`](https://github.com/blader/humanizer) @ `e2e92e7b4b8229253ed5c8e81dc65463fdeddda5`
 - skill-stephenturner: [`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop) @ `a906154bef375d9d49ed2ad7da13b2db16f0d3d2`
 - Repeats: 3, judge votes: 3, budget: $25
@@ -17,7 +19,7 @@ Vale Deslop vs. agent deslop skills, on a pre-registered corpus with a pre-regis
 
 ## Method
 
-Four arms edit the same corpus document with the same shared task text. Only the intervention differs:
+4 arms edit the same corpus document with the same shared task text. Only the intervention differs:
 
 | Arm | Intervention |
 | --- | --- |
@@ -26,14 +28,26 @@ Four arms edit the same corpus document with the same shared task text. Only the
 | `skill-stephenturner` | [`stephenturner/skill-deslop`](https://github.com/stephenturner/skill-deslop), skill `deslop` |
 | `vale-deslop` | this package's built `Deslop.zip`, plus a `vale` fix loop (max 8 iterations) |
 
-Shared task text (`evals/prompts/shared.md`), identical across every arm:
+Shared task text ([`runs/20260828-205343-dcc8eb2/prompts/shared.md`](runs/20260828-205343-dcc8eb2/prompts/shared.md), the copy this run used), identical across every arm:
 
-> Rewrite deslop.md's prose so it no longer reads as AI-generated, preserving every factual claim, heading, list, table, and code block, within 15% of the original word count.
+> You are editing a single Markdown document: deslop.md, in your current working directory.
+>
+> Rewrite its prose so it no longer reads as AI-generated. Save the result by editing deslop.md in
+> place. Do not create any other file.
+>
+> Hard constraints:
+> - Preserve every factual claim, number, name, quotation, and link in the source. Add no new facts.
+> - Preserve the heading structure and all list, table, and code-block markup. Rewriting the text
+>   inside those blocks is fine. Deleting a section is not.
+> - Keep the document within 15% of its original word count.
+> - Do not add HTML comments, linter-suppression markers, or configuration files.
+>
+> When the file is saved, reply with the single word DONE.
 
 Every document is measured before and after with the same fixed Vale configuration — not the repo's own `.vale.ini`, and not any arm's scratch config:
 
 ```ini
-StylesPath = <repo>/Deslop/styles
+StylesPath = <repo>/plugin/skills/deslop-writing/Deslop/styles
 MinAlertLevel = suggestion
 
 [*.md]
@@ -189,7 +203,7 @@ A run with `retention < 0.70` is flagged `over-deletion`: it counts as `ok` but 
 
 - **C1** — PASS: skill-humanizer: 6/6 docs; skill-stephenturner: 6/6 docs
 - **C2** — PASS: vale-deslop mean retention = 0.87
-- **C3** — FAIL: skill-humanizer: vale 3.3 vs 4.74 - 0.5; skill-stephenturner: vale 3.28 vs 4.44 - 0.5
+- **C3** — FAIL: skill-humanizer: vale-deslop 3.3 vs 4.74 - 0.5; skill-stephenturner: vale-deslop 3.28 vs 4.44 - 0.5
 - **C4** — FAIL: skill-humanizer: win rate 0; skill-stephenturner: win rate 0
 
 Hypothesis held: no

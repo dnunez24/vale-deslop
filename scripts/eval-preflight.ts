@@ -20,6 +20,7 @@ type ClaudeJsonResult = {
   model?: string;
   modelUsage?: Record<string, ModelUsageEntry>;
   total_cost_usd?: number;
+  authMethod?: string;
 };
 
 type ClaudeInvocation = { json: ClaudeJsonResult; raw: string; exitCode: number };
@@ -46,7 +47,7 @@ function runClaude(args: string[], cwd?: string): ClaudeInvocation {
 // total tokens is the fallback signal when no name match is found, since the answering call is
 // consistently the larger one. `.model` and the alias itself are last resorts so the manifest never
 // records "unknown".
-function resolveModel(json: ClaudeJsonResult, alias: string): string {
+export function resolveModel(json: ClaudeJsonResult, alias: string): string {
   const entries = Object.entries(json.modelUsage ?? {});
   if (entries.length === 0) return json.model ?? alias;
 
@@ -173,12 +174,13 @@ async function probeP3(actorModel: string): Promise<ProbeResult & { permissionMo
   };
 }
 
-async function probeP4(judgeModel: string): Promise<ProbeResult & { jsonSchemaSupported: boolean }> {
+async function probeP4(judgeModel: string): Promise<ProbeResult & { jsonSchemaSupported: boolean; resolvedModel: string }> {
   const schema = JSON.stringify({ type: "object", properties: { ok: { type: "boolean" } }, required: ["ok"], additionalProperties: false });
   const { json, raw, exitCode } = runClaude(["-p", "--safe-mode", "--model", judgeModel, "--output-format", "json", "--json-schema", schema, "Return ok=true."]);
+  const resolvedModel = resolveModel(json, judgeModel);
 
   if (exitCode !== 0) {
-    return { name: "P4 structured judge output", pass: false, detail: `--json-schema errored: ${raw.slice(0, 400)}`, jsonSchemaSupported: false };
+    return { name: "P4 structured judge output", pass: false, detail: `--json-schema errored: ${raw.slice(0, 400)}`, jsonSchemaSupported: false, resolvedModel };
   }
   let parsed: unknown;
   try {
@@ -190,9 +192,21 @@ async function probeP4(judgeModel: string): Promise<ProbeResult & { jsonSchemaSu
   return {
     name: "P4 structured judge output",
     pass,
-    detail: pass ? `result: ${json.result}` : `unexpected result: ${(json.result ?? raw).slice(0, 400)}`,
+    detail: pass ? `result: ${json.result}; resolved model: ${resolvedModel}` : `unexpected result: ${(json.result ?? raw).slice(0, 400)}`,
     jsonSchemaSupported: true,
+    resolvedModel,
   };
+}
+
+// `claude auth status` prints JSON whose `authMethod` names how the CLI is authenticated:
+// `claude.ai` for a subscription login, `api_key` when ANTHROPIC_API_KEY is set. The run records it
+// so a reader can tell whether the cost figures were charged to API credit.
+function readAuthMethod(): string {
+  const { json, raw } = runClaude(["auth", "status", "--json"]);
+  if (typeof json.authMethod !== "string" || json.authMethod === "") {
+    throw new Error(`\`claude auth status\` reported no authMethod: ${raw.slice(0, 400)}`);
+  }
+  return json.authMethod;
 }
 
 function parseArgs(argv: string[]): { actorModel: string; judgeModel: string } {
@@ -236,11 +250,14 @@ async function main(): Promise<void> {
     skillIsolated: p2.pass,
   };
 
+  const authMethod = readAuthMethod();
   const output = {
     timestamp: new Date().toISOString(),
     actorModel,
     resolvedActorModel: p1.resolvedModel,
     judgeModel,
+    resolvedJudgeModel: p4.resolvedModel,
+    authMethod,
     probes: [p1, p2, p3, p4].map(({ name, pass, detail }) => ({ name, pass, detail })),
     preflight,
   };

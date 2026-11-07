@@ -6,7 +6,8 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "bun:test";
-import { loadResults, measure, summarize } from "../scripts/eval-lib.ts";
+import { classifyOutput, loadResults, measure, summarize } from "../scripts/eval-lib.ts";
+import { resolveModel } from "../scripts/eval-preflight.ts";
 
 const corpusRoot = fileURLToPath(new URL("../evals/corpus/", import.meta.url));
 const evalsRoot = fileURLToPath(new URL("../evals/", import.meta.url));
@@ -67,5 +68,50 @@ describe("latest eval run artifacts", () => {
       }
       match = linkPattern.exec(report);
     }
+  });
+});
+
+describe("attempt classification", () => {
+  const source = "# Title\n\nThe original paragraph.\n";
+  const rewrite = "# Title\n\nA rewritten paragraph.\n";
+
+  it("accepts a changed rewrite when the source is untouched", () => {
+    expect(classifyOutput({ sourceText: source, currentSourceText: source, outputText: rewrite })).toBeNull();
+  });
+
+  it("fails source-modified when the arm edits the source file", () => {
+    expect(classifyOutput({ sourceText: source, currentSourceText: rewrite, outputText: rewrite })).toBe("source-modified");
+    expect(classifyOutput({ sourceText: source, currentSourceText: null, outputText: rewrite })).toBe("source-modified");
+  });
+
+  it("fails no-output when rewrite.md is missing or blank", () => {
+    expect(classifyOutput({ sourceText: source, currentSourceText: source, outputText: null })).toBe("no-output");
+    expect(classifyOutput({ sourceText: source, currentSourceText: source, outputText: "  \n" })).toBe("no-output");
+  });
+
+  it("fails no-edit when the rewrite equals the source", () => {
+    expect(classifyOutput({ sourceText: source, currentSourceText: source, outputText: source })).toBe("no-edit");
+  });
+
+  it("fails suppression when the rewrite silences Vale", () => {
+    const suppressed = `${rewrite}\n<!-- vale off -->\n`;
+    expect(classifyOutput({ sourceText: source, currentSourceText: source, outputText: suppressed })).toBe("suppression");
+  });
+});
+
+describe("resolved model ids", () => {
+  // Shape recorded from a live `claude -p --model opus --output-format json` call: a small
+  // internal Haiku call and the Opus call that produced `.result` share one `modelUsage` map.
+  const modelUsage = {
+    "claude-haiku-4-5-20251001": { inputTokens: 412, outputTokens: 9, cacheReadInputTokens: 0 },
+    "claude-opus-5-5": { inputTokens: 18, outputTokens: 164, cacheReadInputTokens: 21000 },
+  };
+
+  it("picks the claude-opus-* entry for the opus alias", () => {
+    expect(resolveModel({ modelUsage }, "opus")).toBe("claude-opus-5-5");
+  });
+
+  it("falls back to the busiest entry when no id contains the alias", () => {
+    expect(resolveModel({ modelUsage }, "best")).toBe("claude-opus-5-5");
   });
 });

@@ -1,7 +1,7 @@
-You are editing a single Markdown document: deslop.md, in your current working directory.
+You are revising a single Markdown document: deslop.md, in your current working directory.
 
-Rewrite its prose so it no longer reads as AI-generated. Save the result by editing deslop.md in
-place. Do not create any other file.
+Rewrite its prose so it no longer reads as AI-generated. Save the rewrite to rewrite.md. Leave
+deslop.md unchanged. Do not create any other file.
 
 Hard constraints:
 - Preserve every factual claim, number, name, quotation, and link in the source. Add no new facts.
@@ -10,4 +10,4 @@ Hard constraints:
 - Keep the document within 15% of its original word count.
 - Do not add HTML comments, linter-suppression markers, or configuration files.
 
-When the file is saved, reply with the single word DONE.
+When rewrite.md is saved, reply with the single word DONE.

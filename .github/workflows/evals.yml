@@ -3,14 +3,14 @@ name: evals
 on:
   pull_request:
     paths:
-      - "Deslop/**"
+      - "plugin/skills/deslop-writing/Deslop/**"
       - "evals/**"
       - "scripts/eval-*.ts"
       - "tests/evals.test.ts"
   push:
     branches: [main]
     paths:
-      - "Deslop/**"
+      - "plugin/skills/deslop-writing/Deslop/**"
       - "evals/**"
       - "scripts/eval-*.ts"
       - "tests/evals.test.ts"

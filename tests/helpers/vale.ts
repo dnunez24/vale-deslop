@@ -14,8 +14,12 @@ export type ValeResults = Record<string, Alert[]>;
 const YML_EXTENSION = /\.yml$/;
 
 export const fixturesRoot = fileURLToPath(new URL("../fixtures/", import.meta.url));
-export const packageRoot = fileURLToPath(new URL("../../Deslop/", import.meta.url));
-export const styleDir = fileURLToPath(new URL("../../Deslop/styles/Deslop/", import.meta.url));
+export const packageRoot = fileURLToPath(
+  new URL("../../plugin/skills/deslop-writing/Deslop/", import.meta.url),
+);
+export const styleDir = fileURLToPath(
+  new URL("../../plugin/skills/deslop-writing/Deslop/styles/Deslop/", import.meta.url),
+);
 
 /**
  * Runs `vale --output=JSON` once and parses the result. Never inspect `exitCode`: Vale exits 1

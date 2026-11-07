@@ -1,0 +1,14 @@
+{
+  "name": "vale-deslop",
+  "owner": { "name": "Dave Nuñez", "url": "https://github.com/dnunez24" },
+  "metadata": { "description": "Deslop writing skill and Vale rules." },
+  "plugins": [
+    {
+      "name": "deslop",
+      "source": "./plugin",
+      "version": "1.1.1",
+      "description": "Revise prose so it reads as written by a specific person, using the Deslop Vale rules as advice.",
+      "skills": ["./skills/deslop-writing"]
+    }
+  ]
+}

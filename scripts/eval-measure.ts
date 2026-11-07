@@ -9,7 +9,7 @@
 // the committed `corpus/*.md` and `runs/<id>/**/output.md` files. Also re-checks the suppression
 // pattern against each committed output.md, flipping `status`/`invalidReason` to
 // `failed`/`suppression` if a marker was hand-added after the run — every other failure reason
-// (no-edit, cli-error, config-tampering, skill-not-activated) depends on transcript/scratch-dir
+// (no-output, source-modified, no-edit, cli-error, config-tampering, skill-not-activated) depends on transcript/scratch-dir
 // state this script never sees, so those stay untouched. `judge[]` is untouched too.
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { isDeepStrictEqual } from "node:util";

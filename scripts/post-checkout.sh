@@ -13,4 +13,5 @@ command -v mise >/dev/null 2>&1 || exit 0
 cd "$(git rev-parse --show-toplevel)" || exit 0
 mise install || echo "post-checkout: 'mise install' failed; run it by hand" >&2
 mise run deps || echo "post-checkout: 'mise run deps' failed; run it by hand" >&2
+mise run openspec:init || echo "post-checkout: 'mise run openspec:init' failed; run it by hand" >&2
 exit 0

@@ -1,14 +1,21 @@
 import { readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "bun:test";
-import { deriveRuleTable, RULES_END, RULES_START } from "../scripts/rule-table.ts";
+import {
+  checksCatalogPath,
+  deriveChecksCatalog,
+  deriveRuleTable,
+  RULES_END,
+  RULES_START,
+} from "../scripts/rule-table.ts";
 import { ruleNames, styleDir } from "./helpers/vale.ts";
 
 const VALID_LEVELS = new Set(["error", "warning", "suggestion"]);
 
-const scriptsDir = fileURLToPath(new URL("../Deslop/styles/config/scripts/", import.meta.url));
-const packageIniPath = fileURLToPath(new URL("../Deslop/.vale.ini", import.meta.url));
-const metaPath = fileURLToPath(new URL("../Deslop/styles/Deslop/meta.json", import.meta.url));
+const skillDir = "../plugin/skills/deslop-writing/Deslop";
+const scriptsDir = fileURLToPath(new URL(`${skillDir}/styles/config/scripts/`, import.meta.url));
+const packageIniPath = fileURLToPath(new URL(`${skillDir}/.vale.ini`, import.meta.url));
+const metaPath = fileURLToPath(new URL(`${skillDir}/styles/Deslop/meta.json`, import.meta.url));
 const readmePath = fileURLToPath(new URL("../README.md", import.meta.url));
 
 type Rule = {
@@ -77,5 +84,9 @@ describe("style structure", () => {
     const current = readme.slice(startIdx + RULES_START.length, endIdx).trim();
     const derived = deriveRuleTable(rules).trim();
     expect(current).toBe(derived);
+  });
+
+  it("skill references/checks.md is in sync with the rule files", () => {
+    expect(readFileSync(checksCatalogPath, "utf8")).toBe(deriveChecksCatalog(rules));
   });
 });

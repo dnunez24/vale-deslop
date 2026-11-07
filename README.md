@@ -132,6 +132,32 @@ lstat /tmp/vale-deslop-v1.0.087656/vale-deslop-v1.0.0: no such file or directory
 Vale names a package after its zip file, then looks inside the archive for a directory of that same name.
 GitHub names the directory inside a source archive `<repo>-<tag>`, which never matches the file name, so `vale sync` exits 2 and installs nothing.
 
+## Agent skill
+
+The `deslop-writing` skill revises prose with the Deslop rules as advice.
+It writes a new draft and never edits the original file.
+It also checks new prose the agent writes for you.
+The skill bundles the rules, so it needs no Vale package install, only Vale 3.21.0 or newer on your `PATH`.
+If Vale is missing, the skill offers to install it, and without Vale it reviews against a catalog of the checks.
+
+### Claude Code
+
+```text
+/plugin marketplace add dnunez24/vale-deslop
+/plugin install deslop@vale-deslop
+```
+
+### Agent Plugins clients
+
+Install the `plugin/` directory of this repository.
+Its `plugin.json` follows [Agent Plugins 1.0](https://agent-plugins.org), and the skill is the only component.
+
+### Any agent that reads Agent Skills
+
+```sh
+npx skills add dnunez24/vale-deslop
+```
+
 ## Configuration
 
 Turn a single rule off:
@@ -184,7 +210,7 @@ Deslop.WordEcho = NO
 ## Known interactions
 
 `Deslop.UnicodeDecoration` rewrites curly quotes, em dashes, and other typographic Unicode back to plain ASCII, while `proselint.Typography` rewrites the other direction.
-A project running both must disable `proselint.Typography` (see the rationale in `Deslop/styles/Deslop/UnicodeDecoration.yml`).
+A project running both must disable `proselint.Typography` (see the rationale in `plugin/skills/deslop-writing/Deslop/styles/Deslop/UnicodeDecoration.yml`).
 
 ## Evidence
 

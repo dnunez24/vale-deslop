@@ -1,18 +1,7 @@
 #!/usr/bin/env bun
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
-import { deriveRuleTable, RULES_END, RULES_START } from "./rule-table.ts";
-import { ruleNames, styleDir } from "../tests/helpers/vale.ts";
-
-type Rule = { name: string; extends?: string; message?: string; level?: string };
-
-function loadRules(): Rule[] {
-  return ruleNames().map((name) => {
-    const text = readFileSync(`${styleDir}${name}.yml`, "utf8");
-    const parsed = Bun.YAML.parse(text) as Record<string, unknown>;
-    return { name, ...parsed } as Rule;
-  });
-}
+import { deriveRuleTable, loadRules, RULES_END, RULES_START } from "./rule-table.ts";
 
 const readmePath = fileURLToPath(new URL("../README.md", import.meta.url));
 const readme = readFileSync(readmePath, "utf8");
