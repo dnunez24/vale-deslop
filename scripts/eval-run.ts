@@ -129,8 +129,10 @@ function gitShortSha(): string {
   return stdout.trim();
 }
 
-function gitDirty(): boolean {
-  const { stdout } = sh(["git", "status", "--porcelain"], repoRoot);
+// A run writes its own artifacts under evals/runs/<id>/ before this is read, so they must not count
+// as a dirty tree: the flag exists to show the criteria, prompts, skill, and config were committed.
+function gitDirty(runId: string): boolean {
+  const { stdout } = sh(["git", "status", "--porcelain", "--", ".", `:(exclude)evals/runs/${runId}`], repoRoot);
   return stdout.trim().length > 0;
 }
 
@@ -599,7 +601,7 @@ async function main(): Promise<void> {
     results = {
       runId,
       createdAt: new Date().toISOString(),
-      git: { sha: gitShortSha(), dirty: gitDirty() },
+      git: { sha: gitShortSha(), dirty: gitDirty(runId) },
       vale: { version: sh(["vale", "--version"]).stdout.trim(), unionRuns: 20, packageZipSha256 },
       models: { actor: preflight.resolvedActorModel, judge: preflight.resolvedJudgeModel },
       authMethod: preflight.authMethod,
