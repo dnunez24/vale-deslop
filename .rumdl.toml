@@ -1,6 +1,6 @@
 # OpenSpec skills are git-ignored, and `respect-gitignore = true` skips them.
 [global]
-exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md", "evals"]
+exclude = [".git", ".github", ".vale", "dist", "node_modules", "CHANGELOG.md", "tests/fixtures", "DESLOP_VALE_PACKAGE_PLAN.md", "evals", "docs/eval-v2-handoff.md"]
 respect-gitignore = true
 line-length = 100
 
